@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-Nous - Votre Agence</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .contact-form button {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ff6600; /* Couleur du bouton CTA */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">Votre Logo</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="destinations.html">Destination</a>
+                <ul class="dropdown-content">
+                    <li><a href="domestic.html">Domestic Tourism</a></li>
+                    <li><a href="international.html">External Travel</a></li>
+                </ul>
+            </li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="offers.html">Offers & Packages</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        
+        <h1>Contactez-Nous</h1>
+        <p>Vous avez une question ? Prêt à réserver le voyage de vos rêves ? Remplissez le formulaire ci-dessous ou contactez-nous directement.</p>
+
+        <section class="contact-form-section">
+            <h2>Envoyez-nous un message</h2>
+            
+            <form class="contact-form" action="mailto:votre-email@agence.com" method="post" enctype="text/plain">
+                
+                <label for="name">Votre Nom :</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Votre Email :</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="subject">Sujet :</label>
+                <input type="text" id="subject" name="subject">
+                
+                <label for="message">Votre Message :</label>
+                <textarea id="message" name="message" rows="8" required></textarea>
+                
+                <button type="submit">Envoyer le Message</button>
+            </form>
+        </section>
+
+        <section class="contact-details" style="margin-top: 40px;">
+            <h2>Nos Coordonnées</h2>
+            <p><strong>Adresse :</strong> 123 Rue du Voyage, 75001 Paris, France</p>
+            <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+            <p><strong>Email :</strong> <a href="mailto:info@agence.com">info@agence.com</a></p>
+            <p><strong>Horaires d'ouverture :</strong> Lundi - Vendredi, 09h00 - 18h00</p>
+        </section>
+
+        <section class="map" style="margin-top: 30px;">
+            <h2>Où nous trouver</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.0000!2d2.340000!3d48.860000!..." 
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Tous droits réservés © 2025 Votre Agence de Tourisme</p>
+    </footer>
+
+</body>
+</html>

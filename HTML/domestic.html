@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourisme Domestique - Votre Agence</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">Votre Logo</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="destinations.html">Destination</a>
+                <ul class="dropdown-content">
+                    <li><a href="domestic.html">Domestic Tourism</a></li>
+                    <li><a href="international.html">External Travel</a></li>
+                </ul>
+            </li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="offers.html">Offers & Packages</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        
+        <h1>Explorez les Merveilles de MOROCOO</h1>
+        <p>Nul besoin d'aller loin pour être dépaysé. Notre pays regorge de trésors cachés, de paysages variés et d'une culture incroyablement riche. Laissez-nous vous guider à travers les plus belles régions.</p>
+
+        <h2>En Images</h2>
+        <div class="gallery-grid">
+            <img src="../IMAGES/img.jpg" alt="Paysage de voyage magnifique" style="width:80%; height: 200px;">
+            <img src="../IMAGES/img2.jpg" alt="Paysage de voyage magnifique" style="width:80%; height: 200px;">
+            <img src="../IMAGES/img3.jpg" alt="Paysage de voyage magnifique" style="width:80%; height: 200px;">
+            <img src="../IMAGES/img4.jpg" alt="Paysage de voyage magnifique" style="width:80%; height: 200px;">
+            [<img src="../IMAGES/img5.jpg" alt="Paysage de voyage magnifique" style="width:80%; height: 200px;">
+            <img src="../IMAGES/img6.jpg" alt="Paysage de voyage magnifique" style="width:80%; height: 200px;">
+        </div>
+
+        <h2 style="margin-top: 30px;">Nos Circuits Domestiques</h2>
+        <div class="grid-container">
+
+            <div class="card">
+                <img src="../IMAGES/img11.jpg" alt="Paysage de voyage magnifique" style="width:60%; height: 250px;">
+                <p>Phéniciens, Carthaginois, Romains et les grandes dynasties arabo-berbères ont laissé une empreinte indélébile et unique, bien représentée par le joyau architectural qu'est la nécropole mérinide.
+                Symbole d’une richesse historique et archéologique marocaine.
+                Plongez dans un voyage à travers 2000 ans d'histoire.
+                Ce circuit est conçu pour les passionnés d'archéologie et de culture, reliant les capitales des grandes dynasties aux ruines antiques qui ont façonné le Maroc.</p>
+                <div class="card-content">
+                    <h3>Le Grand Sud : Désert et Oasis</h3>
+                    <p>Une aventure de 7 jours au cœur des dunes dorées. Inclus : nuit en bivouac, balade à dos de chameau et visites des kasbahs.</p>
+                    <a href="offers.html" class="cta-button">Détails de l'offre</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../IMAGES/img111.jpg" alt="Paysage de voyage magnifique" style="width:60%; height: 300px;">
+                <div class="card-content">
+                    <h3>La Côte Atlantique</h3>
+                    <p>Respirez l'air marin. Un circuit de 5 jours combinant villes portuaires historiques et détente sur les plus belles plages.</p>
+                    <a href="offers.html" class="cta-button">Détails de l'offre</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../IMAGES/img12.jpg" alt="Paysage de voyage magnifique" style="width:60%; height: 350px;">
+                <div class="card-content">
+                    <h3>Tour des Villes Impériales</h3>
+                    <p>Plongez dans l'histoire. Visitez les capitales historiques, leurs palais, médinas et monuments centenaires.</p>
+                    <a href="offers.html" class="cta-button">Détails de l'offre</a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Tous droits réservés © 2025 Votre Agence de Tourisme</p>
+    </footer>
+
+</body>
+</html>
