@@ -60,11 +60,17 @@
 /* --- Styles Généraux --- */
 
 body {
+<<<<<<< Updated upstream
     font-family: Arial, sans-serif;
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+=======
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+>>>>>>> Stashed changes
     background-color: #f4f7f6; /* Fond gris très clair */
     color: #333;
     line-height: 1.6;
@@ -76,12 +82,18 @@ body {
     margin: 20px auto;
     padding: 20px;
     background-color: #ffffff;
+<<<<<<< Updated upstream
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+=======
+>>>>>>> Stashed changes
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     border-radius: 8px;
 }
 
+<<<<<<< Updated upstream
 /* --- Barre de Navigation --- */
+=======
+>>>>>>> Stashed changes
 /* Titres */
 h1, h2, h3 {
     font-family: 'Roboto', sans-serif;
@@ -90,8 +102,11 @@ h1, h2, h3 {
 }
 /* --- Barre de Navigation (Style "Boutons") --- */
 .navbar {
+<<<<<<< Updated upstream
     background-color: #333;
     color: white;
+=======
+>>>>>>> Stashed changes
     background-color: #ffffff;
     padding: 10px 5%;
     display: flex;
@@ -101,11 +116,17 @@ h1, h2, h3 {
 }
 
 .navbar .logo a {
+<<<<<<< Updated upstream
     color: white;
     color: #111;
     text-decoration: none;
     font-size: 24px;
     font-weight: bold;
+=======
+    color: #111;
+    text-decoration: none;
+    font-size: 24px;
+>>>>>>> Stashed changes
     font-weight: 700;
 }
 
@@ -113,6 +134,7 @@ h1, h2, h3 {
     display: flex;
 }
 
+<<<<<<< Updated upstream
 .nav-links li {
     position: relative; /* Nécessaire pour le menu déroulant */
 }
@@ -123,6 +145,12 @@ h1, h2, h3 {
     color: #555; /* Couleur du texte du lien */
     text-decoration: none;
     padding: 15px 20px;
+=======
+/* Voici le style "Bouton" pour les liens */
+.nav-links a {
+    color: #555; /* Couleur du texte du lien */
+    text-decoration: none;
+>>>>>>> Stashed changes
     padding: 10px 18px; /* Donne la forme d'un bouton/onglet */
     display: block;
     font-weight: 500; /* Medium */
@@ -132,20 +160,31 @@ h1, h2, h3 {
 }
 
 .nav-links a:hover {
+<<<<<<< Updated upstream
     background-color: #555;
+=======
+>>>>>>> Stashed changes
     background-color: #f0f0f0; /* Fond gris clair au survol */
     color: #0056b3; /* Texte devient bleu */
 }
 
+<<<<<<< Updated upstream
 /* --- Menu Déroulant "Destination" --- */
+=======
+>>>>>>> Stashed changes
 /* --- Menu Déroulant --- */
 .dropdown-content {
     display: none;
     position: absolute;
+<<<<<<< Updated upstream
     background-color: #333;
     background-color: #ffffff;
     min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+=======
+    background-color: #ffffff;
+    min-width: 200px;
+>>>>>>> Stashed changes
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
     z-index: 1;
     border-radius: 8px;
@@ -153,7 +192,10 @@ h1, h2, h3 {
 }
 
 .dropdown-content a {
+<<<<<<< Updated upstream
     padding: 12px 16px;
+=======
+>>>>>>> Stashed changes
     margin: 0;
     border-radius: 0;
     color: #555;
@@ -164,16 +206,19 @@ h1, h2, h3 {
     color: #ffffff;
 }
 
-/* Afficher le menu au survol */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
+<<<<<<< Updated upstream
 /* --- Section "Hero" (pour index.html) --- */
+=======
+>>>>>>> Stashed changes
 /* --- Section "Hero" --- */
 .hero-section {
     position: relative;
     text-align: center;
+<<<<<<< Updated upstream
     color: white;
     color: rgb(101, 120, 148);
 }
@@ -183,11 +228,16 @@ h1, h2, h3 {
     height: 400px;
     object-fit: cover; /* S'assure que l'image couvre la zone */
     filter: brightness(0.7); /* Assombrit l'image pour que le texte ressorte */
+=======
+    color: rgb(101, 120, 148);
+}
+.hero-section  {
+    width: 100%;
+>>>>>>> Stashed changes
     /* height: 400px;*/
     object-fit: cover;
     filter: brightness(0.7); /* Assombrit l'image */
 }
-
 .hero-text {
     position: absolute;
     top: 50%;
@@ -197,6 +247,7 @@ body {
 
 /* Bouton d'action (CTA) */
 .cta-button {
+<<<<<<< Updated upstream
     background-color: #ff6600;
     background-color: #007bff; /* Bleu "officiel" */
     color: white;
@@ -205,12 +256,19 @@ body {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+=======
+    background-color: #007bff; /* Bleu "officiel" */
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+>>>>>>> Stashed changes
     border-radius: 6px;
     font-weight: 700;
     margin-top: 20px;
     display: inline-block;
     transition: transform 0.3s ease, background-color 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+<<<<<<< Updated upstream
 }
 
 .cta-button:hover {
@@ -219,19 +277,34 @@ body {
 }
 
 /* --- Cartes (pour Offres et Services) --- */
+=======
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Bleu plus foncé */
+    transform: translateY(-2px);
+}
+
+>>>>>>> Stashed changes
 /* --- Cartes --- */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+<<<<<<< Updated upstream
     gap: 20px;
+=======
+>>>>>>> Stashed changes
     gap: 24px;
 }
 
 .card {
+<<<<<<< Updated upstream
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     overflow: hidden; /* Pour que l'image s'adapte aux coins arrondis */
+=======
+>>>>>>> Stashed changes
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -250,7 +323,10 @@ body {
 }
 
 .card-content {
+<<<<<<< Updated upstream
     padding: 15px;
+=======
+>>>>>>> Stashed changes
     padding: 20px;
 }
 
@@ -258,31 +334,23 @@ body {
 /* --- Pied de Page (Footer) --- */
 footer {
     text-align: center;
+<<<<<<< Updated upstream
     padding: 20px;
     padding: 30px 20px;
     background-color: #333;
     color: white;
+=======
+    padding: 30px 20px;
+    background-color: #333;
+>>>>>>> Stashed changes
     color: #aaa;
     margin-top: 30px;
 }
-/* Styles pour la section vidéo responsive */
-        .video-section {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee; /* Ajoute une ligne de séparation */
-            text-align: center; /* Centre le titre et le paragraphe */
-        }
 
-        .video-responsive-wrapper {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            max-width: 800px; /* Limite la largeur maximale sur les grands écrans */
-            margin: 20px auto 0; /* Centre le bloc vidéo */
-            padding-top: 56.25%; /* Ratio 16:9 (hauteur / largeur) */
-            background-color: #f0f0f0; /* Un fond gris clair pendant le chargement */
-        }
+/* --- Styles des autres pages --- */
+/* (Ce code CSS inclut déjà les styles pour le blog et le contact) */
 
+<<<<<<< Updated upstream
         .video-responsive-wrapper iframe {
             position: absolute;
             top: 0;
@@ -698,6 +766,8 @@ footer {
 /* --- Styles des autres pages --- */
 /* (Ce code CSS inclut déjà les styles pour le blog et le contact) */
 
+=======
+>>>>>>> Stashed changes
 .post-meta {
     font-size: 0.9em;
     color: #777;
