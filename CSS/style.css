@@ -343,3 +343,31 @@ footer {
         grid-template-columns: 1fr; 
     }
 }
+  
+ /*style de new pages*/
+.blog-post { 
+    margin-top: 30px ; 
+    padding-bottom: 30px ; 
+    border-bottom: 1px solid #eee ; 
+} 
+ 
+.blog-post h2 { 
+    color: #0056b3 ;
+    margin-bottom: 5px ; 
+}
+
+.blog-image { 
+    width: 100% ; 
+    max-width: 600px ; 
+    height: auto ; 
+    border-radius: 8px ; 
+    margin: 15px 0 ;  
+    display: block ; 
+} 
+
+.nav-links .active-link a { 
+    background-color: #f0f0f0 ;
+    color: #0056b3 ; 
+    font-weight: 700 ; 
+} 
+ 
