@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         
         contactForm.addEventListener('submit', function(event) {
-            
+
             const name = document.getElementById('name');
             const email = document.getElementById('email');
 
@@ -45,39 +45,31 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-/* Mettez ce code à l'intérieur de 'DOMContentLoaded' */
-/* ... après votre code de menu, scroll, et formulaire ... */
-
-/* --- 5. Logique de Transition de Page --- */
-
-// Sélectionner tous les liens de votre site
 const allLinks = document.querySelectorAll('a');
 
 allLinks.forEach(function(link) {
-    
-    // Obtenir l'URL du lien
+
     const url = link.href;
 
-    // Vérifier si c'est un lien "interne" (pas un lien externe comme "google.com" ou une ancre "#")
     if (url.includes(window.location.hostname) && !url.includes('#')) {
         
-        // Si c'est un lien interne, ajouter un écouteur d'événement
         link.addEventListener('click', function(event) {
-            
-            // 1. Empêcher le navigateur de changer de page immédiatement
             event.preventDefault();
-            
-            // 2. Ajouter notre classe d'animation de sortie au body
             document.body.classList.add('page-fade-out');
-
-            // 3. Attendre 500ms (la durée de l'animation)
             setTimeout(function() {
-                
-                // 4. Changer manuellement de page
                 window.location.href = url;
-
             }, 500); // 500ms = 0.5s (doit correspondre au CSS !)
         });
     }
 });
+// --- Message pour "Voir les détails" ---
+const detailButtons = document.querySelectorAll('.cta-button');
+
+detailButtons.forEach(function(btn) {
+    btn.addEventListener('click', function(event) {
+        event.preventDefault();
+        alert("Vous avez été victime d'une escroquerie :)");
+    });
+});
+
 }); 
