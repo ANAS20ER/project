@@ -1,7 +1,68 @@
 /* --- Importation Police --- */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+<<<<<<< Updated upstream
 
+=======
+/* ======================================== */
+/* === SECTION RESPONSIVE POUR MOBILE === */
+/* ======================================== */
+
+.container {
+    max-width: 1200px; /* La largeur MAXIMALE sera 1200px (sur PC) */
+    width: 95%;         /* Mais sur les petits écrans, il prendra 95% de la largeur */
+    margin: 0 auto;     /* Centre le conteneur */
+}
+
+/* Si l'écran fait 768px de large ou moins... */
+@media (max-width: 768px) {
+
+    /* --- 1. On réorganise la barre de navigation --- */
+    .navbar {
+        flex-direction: column;   /* Empile le logo et les liens verticalement */
+        align-items: center;      /* Centre les éléments */
+        padding: 15px;
+    }
+
+    /* --- 2. On empile la liste des liens --- */
+    .nav-links {
+        flex-direction: column; /* C'est la correction la plus importante ! */
+        width: 100%;
+        margin-top: 15px; /* Espace entre le logo et les liens */
+    }
+
+    /* --- 3. On ajuste chaque lien --- */
+    .nav-links li {
+        width: 100%;
+        text-align: center; /* Centre le texte */
+    }
+
+    .nav-links a {
+        /* Fait en sorte que le "bouton" prenne toute la largeur */
+        width: 95%; 
+        box-sizing: border-box; /* Empêche le padding de casser la largeur */
+        margin: 5px 0; /* Espace vertical entre les boutons */
+    }
+    
+    /* --- 4. On corrige le menu déroulant --- */
+    .dropdown-content {
+        position: static; /* Le menu ne "flotte" plus */
+        width: 100%;
+        box-shadow: none; /* On enlève l'ombre */
+    }
+    
+    /* --- 5. (Optionnel) On réduit la taille du texte "Hero" --- */
+    .hero-text h1 {
+        font-size: 2.2rem; /* Un peu plus petit pour mobile */
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+}
+>>>>>>> Stashed changes
 /* --- Styles Généraux --- */
+
 body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
@@ -27,7 +88,10 @@ h1, h2, h3 {
     font-weight: 700;
     color: #222;
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 /* --- Barre de Navigation (Style "Boutons") --- */
 .navbar {
     background-color: #ffffff;
@@ -52,11 +116,15 @@ h1, h2, h3 {
     display: flex;
 }
 
+<<<<<<< Updated upstream
 .nav-links li {
     position: relative; /* Nécessaire pour le menu déroulant */
 }
 
 /* Style "Bouton" pour les liens */
+=======
+/* Voici le style "Bouton" pour les liens */
+>>>>>>> Stashed changes
 .nav-links a {
     color: #555; /* Couleur du texte du lien */
     text-decoration: none;
@@ -83,15 +151,21 @@ h1, h2, h3 {
     z-index: 1;
     border-radius: 8px;
     overflow: hidden;
+<<<<<<< Updated upstream
     padding: 0;
     margin: 0;
+=======
+>>>>>>> Stashed changes
 }
 
 .dropdown-content a {
     margin: 0;
     border-radius: 0;
     color: #555;
+<<<<<<< Updated upstream
     padding: 12px 16px; /* Ajouté pour un bon espacement */
+=======
+>>>>>>> Stashed changes
 }
 
 .dropdown-content a:hover {
@@ -107,16 +181,23 @@ h1, h2, h3 {
 .hero-section {
     position: relative;
     text-align: center;
+<<<<<<< Updated upstream
     color: rgb(255, 255, 255); /* Texte blanc pour mieux ressortir */
+=======
+    color: rgb(101, 120, 148);
+>>>>>>> Stashed changes
 }
-
-.hero-section img {
+.hero-section  {
     width: 100%;
+<<<<<<< Updated upstream
     height: 400px;
     object-fit: cover; /* S'assure que l'image couvre la zone */
+=======
+    /* height: 400px;*/
+    object-fit: cover;
+>>>>>>> Stashed changes
     filter: brightness(0.7); /* Assombrit l'image */
 }
-
 .hero-text {
     position: absolute;
     top: 50%;
@@ -173,6 +254,13 @@ h1, h2, h3 {
 
 .card-content {
     padding: 20px;
+<<<<<<< Updated upstream
+=======
+}
+
+.card-content h3 {
+    margin-top: 0;
+>>>>>>> Stashed changes
 }
 
 /* --- Pied de Page (Footer) --- */
@@ -184,6 +272,7 @@ footer {
     margin-top: 30px;
 }
 
+<<<<<<< Updated upstream
 /* --- Styles Page Blog --- */
 .post-meta {
     font-size: 0.9em;
@@ -191,24 +280,44 @@ footer {
     margin-bottom: 10px;
 }
 
+=======
+/* --- Styles des autres pages --- */
+/* (Ce code CSS inclut déjà les styles pour le blog et le contact) */
+
+.post-meta {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+}
+>>>>>>> Stashed changes
 .video-section {
     margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid #eee;
     text-align: center;
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .video-responsive-wrapper {
     position: relative;
     overflow: hidden;
     width: 100%;
     max-width: 800px;
     margin: 20px auto 0;
+<<<<<<< Updated upstream
     padding-top: 56.25%; /* Ratio 16:9 */
     background-color: #f0f0f0;
     border-radius: 8px;
 }
 
+=======
+    padding-top: 56.25%;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+>>>>>>> Stashed changes
 .video-responsive-wrapper iframe {
     position: absolute;
     top: 0;
@@ -217,18 +326,27 @@ footer {
     height: 100%;
     border: none;
 }
+<<<<<<< Updated upstream
 
 /* --- Styles Page Contact --- */
+=======
+>>>>>>> Stashed changes
 .contact-form {
     display: flex;
     flex-direction: column;
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .contact-form label {
     margin-top: 15px;
     font-weight: 500;
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 .contact-form input,
 .contact-form textarea {
     padding: 12px;
@@ -236,20 +354,31 @@ footer {
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 16px;
+<<<<<<< Updated upstream
     font-family: 'Roboto', sans-serif; /* S'assure que le formulaire utilise la bonne police */
 }
 
+=======
+}
+>>>>>>> Stashed changes
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
     border-color: #007bff;
     box-shadow: 0 0 0 3px rgba(0,123,255,0.2);
 }
+<<<<<<< Updated upstream
 
 .contact-form button {
     margin-top: 20px;
     padding: 15px;
     background-color: #007bff; /* Couleur bleue (unifiée) */
+=======
+.contact-form button {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #007bff;
+>>>>>>> Stashed changes
     color: white;
     border: none;
     cursor: pointer;
@@ -258,6 +387,7 @@ footer {
     border-radius: 6px;
     transition: background-color 0.3s ease;
 }
+<<<<<<< Updated upstream
 
 .contact-form button:hover {
     background-color: #0056b3;
@@ -267,12 +397,18 @@ footer {
     margin-top: 30px; /* Espace entre le formulaire et la carte */
 }
 
+=======
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+>>>>>>> Stashed changes
 .map iframe {
     width: 100%;
     height: 450px;
     border: 0;
     border-radius: 8px;
 }
+<<<<<<< Updated upstream
 
 
 /* ======================================== */
@@ -425,3 +561,36 @@ body.page-fade-out {
         transform: translateY(-20px); /* Part légèrement vers le haut */
     }
 }
+=======
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.contact-form button {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ff6600; /* Couleur du bouton CTA */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+.post-meta {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+}
+>>>>>>> Stashed changes
