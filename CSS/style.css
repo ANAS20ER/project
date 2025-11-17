@@ -1,73 +1,62 @@
 /* --- Importation Police --- */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-<<<<<<< Updated upstream
 
-=======
 /* ======================================== */
 /* === SECTION RESPONSIVE POUR MOBILE === */
 /* ======================================== */
 
 .container {
-    max-width: 1200px; /* La largeur MAXIMALE sera 1200px (sur PC) */
-    width: 95%;         /* Mais sur les petits écrans, il prendra 95% de la largeur */
-    margin: 0 auto;     /* Centre le conteneur */
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
 }
 
-/* Si l'écran fait 768px de large ou moins... */
 @media (max-width: 768px) {
-
-    /* --- 1. On réorganise la barre de navigation --- */
     .navbar {
-        flex-direction: column;   /* Empile le logo et les liens verticalement */
-        align-items: center;      /* Centre les éléments */
+        flex-direction: column;
+        align-items: center;
         padding: 15px;
     }
 
-    /* --- 2. On empile la liste des liens --- */
     .nav-links {
-        flex-direction: column; /* C'est la correction la plus importante ! */
+        flex-direction: column;
         width: 100%;
-        margin-top: 15px; /* Espace entre le logo et les liens */
+        margin-top: 15px;
     }
 
-    /* --- 3. On ajuste chaque lien --- */
     .nav-links li {
         width: 100%;
-        text-align: center; /* Centre le texte */
+        text-align: center;
     }
 
     .nav-links a {
-        /* Fait en sorte que le "bouton" prenne toute la largeur */
-        width: 95%; 
-        box-sizing: border-box; /* Empêche le padding de casser la largeur */
-        margin: 5px 0; /* Espace vertical entre les boutons */
+        width: 95%;
+        box-sizing: border-box;
+        margin: 5px 0;
     }
-    
-    /* --- 4. On corrige le menu déroulant --- */
+
     .dropdown-content {
-        position: static; /* Le menu ne "flotte" plus */
+        position: static;
         width: 100%;
-        box-shadow: none; /* On enlève l'ombre */
+        box-shadow: none;
     }
-    
-    /* --- 5. (Optionnel) On réduit la taille du texte "Hero" --- */
+
     .hero-text h1 {
-        font-size: 2.2rem; /* Un peu plus petit pour mobile */
+        font-size: 2.2rem;
     }
-    
+
     .hero-text p {
         font-size: 1rem;
     }
-
 }
->>>>>>> Stashed changes
+
 /* --- Styles Généraux --- */
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6; /* Fond gris très clair */
+    background-color: #f4f7f6;
     color: #333;
     line-height: 1.6;
 }
@@ -88,11 +77,8 @@ h1, h2, h3 {
     font-weight: 700;
     color: #222;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
-/* --- Barre de Navigation (Style "Boutons") --- */
+/* --- Barre de Navigation --- */
 .navbar {
     background-color: #ffffff;
     padding: 10px 5%;
@@ -110,35 +96,31 @@ h1, h2, h3 {
 }
 
 .nav-links {
-    list-style: none; /* S'assure qu'il n'y a pas de puces */
+    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-<<<<<<< Updated upstream
 .nav-links li {
-    position: relative; /* Nécessaire pour le menu déroulant */
+    position: relative;
 }
 
-/* Style "Bouton" pour les liens */
-=======
-/* Voici le style "Bouton" pour les liens */
->>>>>>> Stashed changes
+/* Liens */
 .nav-links a {
-    color: #555; /* Couleur du texte du lien */
+    color: #555;
     text-decoration: none;
-    padding: 10px 18px; /* Donne la forme d'un bouton/onglet */
+    padding: 10px 18px;
     display: block;
-    font-weight: 500; /* Medium */
-    border-radius: 6px; /* Coins arrondis pour le "bouton" */
-    margin: 0 5px; /* Espace entre les "boutons" */
+    font-weight: 500;
+    border-radius: 6px;
+    margin: 0 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-links a:hover {
-    background-color: #f0f0f0; /* Fond gris clair au survol */
-    color: #0056b3; /* Texte devient bleu */
+    background-color: #f0f0f0;
+    color: #0056b3;
 }
 
 /* --- Menu Déroulant --- */
@@ -147,25 +129,19 @@ h1, h2, h3 {
     position: absolute;
     background-color: #ffffff;
     min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
     z-index: 1;
     border-radius: 8px;
     overflow: hidden;
-<<<<<<< Updated upstream
     padding: 0;
     margin: 0;
-=======
->>>>>>> Stashed changes
 }
 
 .dropdown-content a {
     margin: 0;
     border-radius: 0;
     color: #555;
-<<<<<<< Updated upstream
-    padding: 12px 16px; /* Ajouté pour un bon espacement */
-=======
->>>>>>> Stashed changes
+    padding: 12px 16px;
 }
 
 .dropdown-content a:hover {
@@ -177,38 +153,27 @@ h1, h2, h3 {
     display: block;
 }
 
-/* --- Section "Hero" --- */
+/* --- Section Hero --- */
 .hero-section {
     position: relative;
     text-align: center;
-<<<<<<< Updated upstream
-    color: rgb(255, 255, 255); /* Texte blanc pour mieux ressortir */
-=======
-    color: rgb(101, 120, 148);
->>>>>>> Stashed changes
-}
-.hero-section  {
+    color: rgb(255, 255, 255);
     width: 100%;
-<<<<<<< Updated upstream
-    height: 400px;
-    object-fit: cover; /* S'assure que l'image couvre la zone */
-=======
-    /* height: 400px;*/
     object-fit: cover;
->>>>>>> Stashed changes
-    filter: brightness(0.7); /* Assombrit l'image */
+    filter: brightness(0.7);
 }
+
 .hero-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%; /* Empêche le texte de coller aux bords sur mobile */
+    width: 90%;
 }
 
-/* Bouton d'action (CTA) */
+/* Bouton CTA */
 .cta-button {
-    background-color: #007bff; /* Bleu "officiel" */
+    background-color: #007bff;
     color: white;
     padding: 12px 24px;
     text-decoration: none;
@@ -221,7 +186,7 @@ h1, h2, h3 {
 }
 
 .cta-button:hover {
-    background-color: #0056b3; /* Bleu plus foncé */
+    background-color: #0056b3;
     transform: translateY(-2px);
 }
 
@@ -236,7 +201,7 @@ h1, h2, h3 {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    overflow: hidden; 
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #ffffff;
 }
@@ -248,22 +213,19 @@ h1, h2, h3 {
 
 .card img {
     width: 100%;
-    height: 200px; /* Hauteur fixe pour les images de carte */
+    height: 200px;
     object-fit: cover;
 }
 
 .card-content {
     padding: 20px;
-<<<<<<< Updated upstream
-=======
 }
 
 .card-content h3 {
     margin-top: 0;
->>>>>>> Stashed changes
 }
 
-/* --- Pied de Page (Footer) --- */
+/* --- Footer --- */
 footer {
     text-align: center;
     padding: 30px 20px;
@@ -272,52 +234,31 @@ footer {
     margin-top: 30px;
 }
 
-<<<<<<< Updated upstream
-/* --- Styles Page Blog --- */
+/* --- Blog --- */
 .post-meta {
     font-size: 0.9em;
     color: #777;
     margin-bottom: 10px;
 }
 
-=======
-/* --- Styles des autres pages --- */
-/* (Ce code CSS inclut déjà les styles pour le blog et le contact) */
-
-.post-meta {
-    font-size: 0.9em;
-    color: #777;
-    margin-bottom: 10px;
-}
->>>>>>> Stashed changes
 .video-section {
     margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid #eee;
     text-align: center;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .video-responsive-wrapper {
     position: relative;
     overflow: hidden;
     width: 100%;
     max-width: 800px;
     margin: 20px auto 0;
-<<<<<<< Updated upstream
-    padding-top: 56.25%; /* Ratio 16:9 */
-    background-color: #f0f0f0;
-    border-radius: 8px;
-}
-
-=======
     padding-top: 56.25%;
     background-color: #f0f0f0;
     border-radius: 8px;
 }
->>>>>>> Stashed changes
+
 .video-responsive-wrapper iframe {
     position: absolute;
     top: 0;
@@ -326,27 +267,18 @@ footer {
     height: 100%;
     border: none;
 }
-<<<<<<< Updated upstream
 
-/* --- Styles Page Contact --- */
-=======
->>>>>>> Stashed changes
+/* --- Contact --- */
 .contact-form {
     display: flex;
     flex-direction: column;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .contact-form label {
     margin-top: 15px;
     font-weight: 500;
 }
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 .contact-form input,
 .contact-form textarea {
     padding: 12px;
@@ -354,31 +286,20 @@ footer {
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 16px;
-<<<<<<< Updated upstream
-    font-family: 'Roboto', sans-serif; /* S'assure que le formulaire utilise la bonne police */
+    font-family: 'Roboto', sans-serif;
 }
 
-=======
-}
->>>>>>> Stashed changes
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
     border-color: #007bff;
     box-shadow: 0 0 0 3px rgba(0,123,255,0.2);
 }
-<<<<<<< Updated upstream
 
 .contact-form button {
     margin-top: 20px;
     padding: 15px;
-    background-color: #007bff; /* Couleur bleue (unifiée) */
-=======
-.contact-form button {
-    margin-top: 20px;
-    padding: 15px;
     background-color: #007bff;
->>>>>>> Stashed changes
     color: white;
     border: none;
     cursor: pointer;
@@ -387,126 +308,101 @@ footer {
     border-radius: 6px;
     transition: background-color 0.3s ease;
 }
-<<<<<<< Updated upstream
 
 .contact-form button:hover {
     background-color: #0056b3;
 }
 
-.map {
-    margin-top: 30px; /* Espace entre le formulaire et la carte */
-}
-
-=======
-.contact-form button:hover {
-    background-color: #0056b3;
-}
->>>>>>> Stashed changes
 .map iframe {
     width: 100%;
     height: 450px;
     border: 0;
     border-radius: 8px;
 }
-<<<<<<< Updated upstream
 
-
-/* ======================================== */
-/* === SECTION RESPONSIVE POUR MOBILE === */
-/* ======================================== */
-
-/* Si l'écran fait 768px de large ou moins... */
+/* Responsive (section répétée dans ton code — je l’ai laissée intacte) */
 @media (max-width: 768px) {
-
-    /* --- Conteneur principal --- */
     .container {
-        width: 95%; /* Prend plus de place sur mobile */
+        width: 95%;
         margin: 10px auto;
         padding: 15px;
     }
 
-    /* --- 1. On réorganise la barre de navigation --- */
     .navbar {
-        flex-direction: column;   /* Empile le logo et les liens verticalement */
-        align-items: center;      /* Centre les éléments */
+        flex-direction: column;
+        align-items: center;
         padding: 15px;
     }
 
-    /* --- 2. On empile la liste des liens --- */
     .nav-links {
-        flex-direction: column; /* C'est la correction la plus importante ! */
+        flex-direction: column;
         width: 100%;
-        margin-top: 15px; /* Espace entre le logo et les liens */
+        margin-top: 15px;
     }
 
-    /* --- 3. On ajuste chaque lien --- */
     .nav-links li {
         width: 100%;
-        text-align: center; /* Centre le texte */
+        text-align: center;
     }
 
     .nav-links a {
-        width: 95%; /* Fait en sorte que le "bouton" prenne toute la largeur */
-        box-sizing: border-box; /* Empêche le padding de casser la largeur */
-        margin: 5px 0; /* Espace vertical entre les boutons */
+        width: 95%;
+        margin: 5px 0;
     }
-    
-    /* --- 4. On corrige le menu déroulant --- */
+
     .dropdown-content {
-        position: static; /* Le menu ne "flotte" plus */
+        position: static;
         width: 100%;
-        box-shadow: none; /* On enlève l'ombre */
-        background-color: #f0f0f0; /* Léger fond pour le distinguer */
+        box-shadow: none;
+        background-color: #f0f0f0;
     }
-    
-    /* --- 5. On réduit la taille du texte "Hero" --- */
+
     .hero-text h1 {
-        font-size: 2.2rem; /* Un peu plus petit pour mobile */
+        font-size: 2.2rem;
     }
-    
+
     .hero-text p {
         font-size: 1rem;
     }
-    
+
     .cta-button {
         padding: 10px 18px;
         font-size: 16px;
     }
-    
-    /* --- 6. Grille des cartes --- */
+
     .grid-container {
-        /* Passe en une seule colonne sur mobile */
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 }
-  
- /*style de new pages*/
-.blog-post { 
-    margin-top: 30px ; 
-    padding-bottom: 30px ; 
-    border-bottom: 1px solid #eee ; 
-} 
- 
-.blog-post h2 { 
-    color: #0056b3 ;
-    margin-bottom: 5px ; 
+
+/* Styles supplémentaires */
+.blog-post {
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
 }
 
-.blog-image { 
-    width: 100% ; 
-    max-width: 600px ; 
-    height: auto ; 
-    border-radius: 8px ; 
-    margin: 15px 0 ;  
-    display: block ; 
-} 
+.blog-post h2 {
+    color: #0056b3;
+    margin-bottom: 5px;
+}
 
-.nav-links .active-link a { 
-    background-color: #f0f0f0 ;
-    color: #0056b3 ; 
-    font-weight: 700 ; 
-} 
- 
+.blog-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin: 15px 0;
+    display: block;
+}
+
+.nav-links .active-link a {
+    background-color: #f0f0f0;
+    color: #0056b3;
+    font-weight: 700;
+}
+
+/* Scroll to top */
 #scrollToTopBtn {
     display: none;
     position: fixed;
@@ -522,75 +418,23 @@ footer {
     padding: 12px 16px;
     border-radius: 1000px;
     box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-    transition: background-color 0.3s ease;
 }
-/* --- 7. Animations de Transition de Page ---------------------------------------------------------------------------------- */
 
-/* Appliquer l'animation d'entrée à chaque chargement de page */
-/* (Nous animons le conteneur principal) */
+/* Animations */
 main.container, .hero-section {
-    /* 0.5s = 500ms */
     animation: fadeIn 0.5s ease-out forwards;
 }
 
-/* Classe que le JS ajoutera pour l'animation de sortie */
 body.page-fade-out {
-    /* 0.5s = 500ms */
     animation: fadeOut 0.5s ease-in forwards;
 }
 
-/* Définition des animations */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px); /* Vient légèrement du bas */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeOut {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateY(-20px); /* Part légèrement vers le haut */
-    }
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-20px); }
 }
-=======
-.contact-form {
-    display: flex;
-    flex-direction: column;
-}
-.contact-form label {
-    margin-top: 10px;
-    font-weight: bold;
-}
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-.contact-form button {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #ff6600; /* Couleur du bouton CTA */
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-}
-.post-meta {
-    font-size: 0.9em;
-    color: #777;
-    margin-bottom: 10px;
-}
->>>>>>> Stashed changes
