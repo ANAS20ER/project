@@ -500,3 +500,13 @@ body.dark-mode .theme-btn:hover {
     background-color: #fff;
     color: #000;
 }
+/* CORRECTION : Forcer le logo en blanc en mode sombre */
+body.dark-mode .navbar .logo a {
+    color: #ffffff;
+}
+
+/* OPTIONNEL : Améliorer la visibilité des liens au survol */
+/* Le bleu foncé par défaut (#0056b3) est difficile à lire sur fond noir */
+body.dark-mode .nav-links a:hover {
+    color: #4da3ff; /* Un bleu plus clair et lumineux */
+}
