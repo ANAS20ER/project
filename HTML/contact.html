@@ -28,6 +28,7 @@
             <li><a href="blog.html">Blog</a></li>
             <li class="active-link"><a href="contact.html">Contact Us</a></li>
         </ul>
+        <button id="theme-toggle" class="theme-btn" title="Changer de thème">🌙</button>
     </nav>
 
     <main class="container">
@@ -35,11 +36,10 @@
         <h1>Contactez-Nous</h1>
         <p>Vous avez une question ? Prêt à réserver le voyage de vos rêves ? Remplissez le formulaire ci-dessous ou contactez-nous directement.</p>
 
-        <!-- FORMULAIRE DE CONTACT -->
         <section class="contact-form-section">
             <h2>Envoyez-nous un message</h2>
 
-            <form class="contact-form" action="mailto:votre-email@agence.com" method="post" enctype="text/plain">
+            <form id="inscriptionForm" class="contact-form" action="mailto:votre-email@agence.com" method="post" enctype="text/plain">
 
                 <label for="name">Votre Nom :</label>
                 <input type="text" id="name" name="name" required>
@@ -51,13 +51,15 @@
                 <input type="text" id="subject" name="subject">
 
                 <label for="message">Votre Message :</label>
-                <textarea id="message" name="message" rows="8" required></textarea>
+                <textarea id="message" name="message" rows="5" maxlength="500" required></textarea>
+                <div style="text-align: right; font-size: 0.8rem; color: #666; margin-bottom: 15px;">
+                    <span id="char-count">0</span> / 500 caractères
+                </div>
 
                 <button type="submit">Envoyer le Message</button>
             </form>
         </section>
 
-        <!-- COORDONNÉES -->
         <section class="contact-details" style="margin-top: 40px;">
             <h2>Nos Coordonnées</h2>
             <p><strong>Adresse :</strong> Rue asswane loubens angle roudte des oulesd ziane , Casablanca</p>
@@ -66,7 +68,6 @@
             <p><strong>Horaires :</strong> Lundi - Vendredi, 09h00 - 18h00</p>
         </section>
 
-        <!-- GOOGLE MAP -->
         <section class="map" style="margin-top: 30px;">
             <h2>Où nous trouver</h2>
             <iframe 
@@ -77,7 +78,7 @@
 
     </main>
 
-    <button id="scrollToTopBtn" title="UP">&#8661;</button>
+    <button id="scrollToTopBtn" title="UP">⇕</button>
 
     <footer>
         <p>Tous droits réservés © 2025 TESA Voyage - Projet DLA S1</p>

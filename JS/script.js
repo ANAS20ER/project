@@ -71,5 +71,56 @@ detailButtons.forEach(function(btn) {
         alert("Vous avez été victime d'une escroquerie :)");
     });
 });
+// ==========================================
+// === SPRINT 6 : BONUS FONCTIONNALITÉS ===
+// ==========================================
 
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // --- 1. MODE SOMBRE (Dark Mode) ---
+    const themeBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Vérifier si un thème est déjà sauvegardé (Bonus cookie/storage)
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+        themeBtn.textContent = '☀️'; // Changer l'icône
+    }
+
+    if (themeBtn) {
+        themeBtn.addEventListener('click', function() {
+            // Basculer la classe 'dark-mode'
+            body.classList.toggle('dark-mode');
+
+            // Changer l'icône et sauvegarder la préférence
+            if (body.classList.contains('dark-mode')) {
+                themeBtn.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeBtn.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    }
+
+    // --- 2. COMPTEUR DE CARACTÈRES ---
+    const messageInput = document.getElementById('message');
+    const charCountDisplay = document.getElementById('char-count');
+
+    if (messageInput && charCountDisplay) {
+        messageInput.addEventListener('input', function() {
+            const currentLength = messageInput.value.length;
+            charCountDisplay.textContent = currentLength;
+
+            // Changer la couleur si on approche de la limite (visuel bonus)
+            if (currentLength > 450) {
+                charCountDisplay.style.color = 'red';
+                charCountDisplay.style.fontWeight = 'bold';
+            } else {
+                charCountDisplay.style.color = 'inherit'; // Couleur par défaut
+                charCountDisplay.style.fontWeight = 'normal';
+            }
+        });
+    }
+});
 }); 
