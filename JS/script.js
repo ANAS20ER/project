@@ -71,9 +71,9 @@ detailButtons.forEach(function(btn) {
         alert("Vous avez été victime d'une escroquerie :)");
     });
 });
-// ==========================================
-// === SPRINT 6 : BONUS FONCTIONNALITÉS ===
-// ==========================================
+// ======================================================================================
+// je voulais ajouter quelques chose . mais je ne veux pas compilque les choses inulement :)
+// ======================================================================================
 
 document.addEventListener('DOMContentLoaded', function() {
     
@@ -123,4 +123,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// ======================================================================================
 }); 
