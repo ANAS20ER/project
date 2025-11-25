@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande de Voyage - TESA</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <style>
+        .form-section-title {
+            font-size: 1.4em;
+            margin-top: 25px;
+            color: #0056b3;
+            border-left: 4px solid #007bff;
+            padding-left: 10px;
+        }
+
+        .form-group {
+            margin-top: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <a href="../index.html">TESA Voyage</a>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+
+        <li class="dropdown">
+            <a href="destinations.html">Destination</a>
+            <ul class="dropdown-content">
+                <li><a href="domestic.html">Domestic Tourism</a></li>
+                <li><a href="international.html">External Travel</a></li>
+            </ul>
+        </li>
+
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="offers.html">Offers & Packages</a></li>
+        <li><a href="request.html">Book a Trip</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+<main class="container">
+    <h1>Demande de Réservation de Voyage</h1>
+    <p>Veuillez remplir ce formulaire afin de réserver votre voyage.</p>
+
+    <form class="contact-form" id="travelForm">
+
+        <!-- SECTION 1: Infos personnelles -->
+        <h3 class="form-section-title">Informations Personnelles</h3>
+
+        <label>Nom :</label>
+        <input type="text" name="nom" placeholder="Votre nom" required>
+
+        <label>Prénom :</label>
+        <input type="text" name="prenom" placeholder="Votre prénom" required>
+
+        <label>Âge :</label>
+        <input type="number" name="age" min="18" placeholder="Doit être ≥ 18" required>
+
+        <label>Email :</label>
+        <input type="email" name="email" placeholder="exemple@gmail.com" required>
+
+        <label>Téléphone :</label>
+        <input type="tel" name="telephone" placeholder="+212 6 12 34 56 78" required>
+
+        <!-- SECTION 2: Voyage -->
+        <h3 class="form-section-title">Détails du Voyage</h3>
+
+        <label>Ville de départ :</label>
+        <input type="text" name="depart" placeholder="Ville de départ" required>
+
+        <label>Nombre de voyageurs :</label>
+        <select name="voyageurs" required>
+            <option value="">-- Sélectionnez --</option>
+            <option>1 personne</option>
+            <option>2 personnes</option>
+            <option>3 personnes</option>
+            <option>4 personnes</option>
+            <option>5 ou plus</option>
+        </select>
+
+        <label>Y a-t-il des enfants ?</label>
+        <select name="children" required>
+            <option value="">-- Sélectionnez --</option>
+            <option>Non</option>
+            <option>Oui</option>
+        </select>
+
+        <!-- Destinations améliorées -->
+        <label>Destination :</label>
+        <select name="destination" required>
+            <option value="">-- Sélectionnez une destination --</option>
+
+            <optgroup label="🇲🇦 Maroc">
+                <option>Marrakech</option>
+                <option>Dakhla</option>
+                <option>Chefchaouen</option>
+                <option>Merzouga</option>
+                <option>Fès</option>
+                <option>Taghazout</option>
+            </optgroup>
+
+            <optgroup label="🇪🇺 Europe">
+                <option>Paris</option>
+                <option>Istanbul</option>
+                <option>Barcelone</option>
+                <option>Rome</option>
+                <option>Lisbonne</option>
+                <option>Amsterdam</option>
+                <option>Prague</option>
+            </optgroup>
+
+            <optgroup label="🌍 Afrique & Moyen-Orient">
+                <option>Dubai</option>
+                <option>Égypte</option>
+                <option>Tanzanie</option>
+                <option>Sénégal</option>
+                <option>Seychelles</option>
+                <option>Tunisie</option>
+            </optgroup>
+
+            <optgroup label="🌏 Asie & Amériques">
+                <option>Thaïlande</option>
+                <option>Bali</option>
+                <option>New York</option>
+                <option>Japon</option>
+                <option>Canada</option>
+                <option>Malaisie</option>
+                <option>Brésil</option>
+            </optgroup>
+        </select>
+
+        <!-- SECTION 3: Document -->
+        <h3 class="form-section-title">Documents</h3>
+
+        <label>Photo du Passeport :</label>
+        <input type="file" name="passport" accept="image/*" required>
+
+        <button type="submit">Envoyer la Demande</button>
+    </form>
+</main>
+
+<footer>
+    <p>Tous droits réservés © 2025 TESA Voyage - Projet DLA S1</p>
+</footer>
+<!-- Mini Page Confirmation -->
+<!-- Mini Page Confirmation -->
+<div id="confirmationModal" style="
+    display:none;
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter: blur(3px);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;">
+    
+    <div style="
+        background:white;
+        width:90%;
+        max-width:500px;
+        padding:25px;
+        border-radius:10px;
+        box-shadow:0 4px 20px rgba(0,0,0,0.3);
+        animation: fadeIn 0.5s ease;">
+        
+        <h2 style="color:#007bff; margin-bottom:10px;">✔ Demande Envoyée</h2>
+        <p id="confirmationText" style="line-height:1.6;"></p>
+
+        <button onclick="closeModal()" style="
+            margin-top:20px;
+            padding:12px 20px;
+            background:#007bff;
+            border:none;
+            color:white;
+            font-weight:600;
+            border-radius:8px;
+            cursor:pointer;
+            width:100%;
+            font-size:16px;">
+            Fermer
+        </button>
+    </div>
+</div>
+<script src="../JS/script.js"></script>
+</body>
+</html>

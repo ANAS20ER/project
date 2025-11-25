@@ -63,14 +63,16 @@ allLinks.forEach(function(link) {
     }
 });
 // --- Message pour "Voir les détails" ---
-const detailButtons = document.querySelectorAll('.cta-button');
+if (window.location.pathname.includes("offers.html")) {
 
-detailButtons.forEach(function(btn) {
-    btn.addEventListener('click', function(event) {
-        event.preventDefault();
-        alert("Vous avez été victime d'une escroquerie :)");
-    });
-});
+    const detailButtons = document.querySelectorAll('.cta-button');
+
+    detailButtons.forEach(function(btn) {
+        btn.addEventListener('click', function(event) {
+            event.preventDefault();
+            alert("Vous avez été victime d'une escroquerie :)");
+        });
+    });}
 // ======================================================================================
 // je voulais ajouter quelques chose . mais je ne veux pas compilque les choses inulement :)
 // ======================================================================================
@@ -124,4 +126,70 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 // ======================================================================================
+/* ============================================================
+   === 3. Formulaire de réservation (ONLY request.html) =======
+   ============================================================ */
+
+if (window.location.pathname.includes("request.html")) {
+
+    const form = document.getElementById("travelForm");
+    const modal = document.getElementById("confirmationModal");
+    const confirmText = document.getElementById("confirmationText");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nom = form.nom.value.trim();
+        const prenom = form.prenom.value.trim();
+        const depart = form.depart.value.trim();
+        const age = parseInt(form.age.value);
+        const email = form.email.value.trim();
+        const tel = form.telephone.value.trim();
+        const dest = form.destination.value;
+        const voyageurs = form.voyageurs.value;
+        const enfants = form.children.value;
+        const passport = form.passport.value;
+
+        // التحقق من العمر
+        if (age < 18) {
+            alert("❌ Désolé, vous devez avoir au moins 18 ans pour réserver un voyage.");
+            return;
+        }
+
+        // التحقق من الحقول
+        if (!nom || !prenom || !depart || !email || !tel || !dest || !voyageurs || !enfants || !passport) {
+            alert("⚠️ Merci de remplir tous les champs.");
+            return;
+        }
+
+        // إنشاء نص التأكيد
+        confirmText.innerHTML = `
+            <strong>Merci ${prenom} ${nom} !</strong><br><br>
+            Votre demande de voyage a été envoyée avec succès.<br><br>
+
+            <strong>📌 Détails de votre réservation :</strong><br>
+            • <b>Départ :</b> ${depart}<br>
+            • <b>Destination :</b> ${dest}<br>
+            • <b>Voyageurs :</b> ${voyageurs}<br>
+            • <b>Enfants :</b> ${enfants}<br><br>
+
+            <strong>📞 Nous vous contacterons bientôt :</strong><br>
+            • <b>Email :</b> ${email}<br>
+            • <b>Téléphone :</b> ${tel}<br><br>
+
+            Votre dossier est en cours de traitement. Merci d'avoir choisi <b>TESA Voyage</b>.
+        `;
+
+        // إظهار المودال
+        modal.style.display = "flex";
+
+        // إعادة تعيين الفورم
+        form.reset();
+    });
+
+    // إغلاق المودال
+    window.closeModal = function () {
+        modal.style.display = "none";
+    };
+}
 }); 
