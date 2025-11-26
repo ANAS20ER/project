@@ -41,19 +41,36 @@ function displayReservations() {
             <td>${res.totalVoyageurs}</td>
             <td>${res.destination}</td>
             <td>${res.depart}</td>
-            <td>${res.retour}</td>
+            <td><button class="deleteBtn" data-index="${index}">
+                    ❌ Supprimer
+                </button>
+            </td>
+
         `;
         tableBody.appendChild(row);
     });
+    addDeleteEvents();
 }
 
 // Supprimer toutes les réservations
-document.getElementById("clearReservations").addEventListener("click", () => {
-    if(confirm("Voulez-vous vraiment supprimer toutes les réservations ?")) {
-        localStorage.removeItem("reservations");
-        displayReservations();
-    }
-});
+function addDeleteEvents() {
+    const deleteButtons = document.querySelectorAll(".deleteBtn");
+
+    deleteButtons.forEach(btn => {
+        btn.addEventListener("click", function() {
+            const index = this.getAttribute("data-index");
+
+            if(confirm("Voulez-vous supprimer cette réservation ?")) {
+                let reservations = getReservations();
+                reservations.splice(index, 1); // supprimer une ligne
+
+                localStorage.setItem("reservations", JSON.stringify(reservations));
+
+                displayReservations(); // rafraîchir l'affichage
+            }
+        });
+    });
+}
 
 // Afficher les réservations au chargement de la page
 displayReservations();

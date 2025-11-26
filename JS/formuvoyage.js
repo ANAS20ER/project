@@ -137,6 +137,23 @@ form.addEventListener("submit", (e) => {
         }
     }
 
+// ===================== VÉRIFICATION DES DATES (CORRIGÉE) =====================
+const inputDepart = document.getElementById("depart");
+
+// 1. Convertir les valeurs en objets Date
+const dateDepart = new Date(inputDepart.value);
+const today = new Date();
+today.setHours(0, 0, 0, 0); // Réinitialiser l'heure pour comparer uniquement les jours
+
+// Réinitialiser la variable de validation pour être sûr
+let dateValidationPassed = true;
+
+// 2. Vérification 1 : Date de départ dans le passé
+if (inputDepart.value && dateDepart < today) {
+    showError(inputDepart, "La date de départ ne peut pas être dans le passé.");
+    isValid = false;
+    dateValidationPassed = false;
+}
     // Si tout est bon
     if (isValid) {
         const reservation = {
