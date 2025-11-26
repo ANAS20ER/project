@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    /*
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    */
 const allLinks = document.querySelectorAll('a');
 
 allLinks.forEach(function(link) {

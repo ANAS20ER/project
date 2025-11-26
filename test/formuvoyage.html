@@ -3,27 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demande de Voyage - TESA</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/formuvoyage.css">
-    <style>
-        .form-section-title {
-            font-size: 1.4em;
-            margin-top: 25px;
-            color: #0056b3;
-            border-left: 4px solid #007bff;
-            padding-left: 10px;
-        }
-
-        .form-group {
-            margin-top: 12px;
-        }
-    </style>
+    <title>Demande de Réservation de Voyage</title>
+    <link rel="stylesheet" href="formuvoyage.css">
 </head>
-
 <body>
 
 <nav class="navbar">
+    <div class="burger">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
     <div class="logo">
         <a href="../index.html">TESA Voyage</a>
     </div>
@@ -47,8 +38,10 @@
         <li><a href="contact.html">Contact Us</a></li>
     </ul>
 </nav>
-<main class="container">
-    <form class="contact-form" id="reservationForm">
+
+
+
+
     <div class="form-container">
         <h2>Demande de Réservation de Voyage</h2>
         <p>Veuillez remplir ce formulaire afin de réserver votre voyage.</p>
@@ -199,53 +192,6 @@
         </form>
     </div>
 
-    </form>
-</main>
-
-<footer>
-    <p>Tous droits réservés © 2025 TESA Voyage - Projet DLA S1</p>
-</footer>
-<!-- Mini Page Confirmation -->
-<!-- Mini Page Confirmation -->
-<div id="confirmationModal" style="
-    display:none;
-    position:fixed;
-    top:0; left:0;
-    width:100%; height:100%;
-    background:rgba(0,0,0,0.6);
-    backdrop-filter: blur(3px);
-    justify-content:center;
-    align-items:center;
-    z-index:9999;">
-    
-    <div style="
-        background:white;
-        width:90%;
-        max-width:500px;
-        padding:25px;
-        border-radius:10px;
-        box-shadow:0 4px 20px rgba(0,0,0,0.3);
-        animation: fadeIn 0.5s ease;">
-        
-        <h2 style="color:#007bff; margin-bottom:10px;">✔ Demande Envoyée</h2>
-        <p id="confirmationText" style="line-height:1.6;"></p>
-
-        <button onclick="closeModal()" style="
-            margin-top:20px;
-            padding:12px 20px;
-            background:#007bff;
-            border:none;
-            color:white;
-            font-weight:600;
-            border-radius:8px;
-            cursor:pointer;
-            width:100%;
-            font-size:16px;">
-            Fermer
-        </button>
-    </div>
-</div>
-<script src="../JS/script.js"></script>
-<script src="../JS/formuvoyage.js"></script>
+    <script src="formuvoyage.js"></script>
 </body>
 </html>
