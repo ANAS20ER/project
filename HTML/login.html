@@ -3,83 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion Utilisateur - TESA Voyage</title>
+    <title>Connexion</title>
+    <link rel="stylesheet" href="../CSS/login.css">
     <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/formuvoyage.css"> <style>
-        /* Styles spécifiques pour centrer la boîte de connexion */
-        .login-container {
-            max-width: 400px;
-            margin: 80px auto; /* Centre horizontalement et donne de l'espace en haut */
-            padding: 40px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .login-container h1 {
-            text-align: center;
-            color: #007bff;
-            margin-bottom: 25px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
-
 <body>
-<nav class="navbar">
-    <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li class="dropdown">
-            <a href="destinations.html">Destination</a>
-            <ul class="dropdown-content">
-                <li><a href="domestic.html">Domestic Tourism</a></li>
-                <li><a href="international.html">External Travel</a></li>
-            </ul>
-        </li>
-        <li><a href="services.html">Our Services</a></li>
-        <li><a href="offers.html">Offers & Packages</a></li>
-        <li><a href="request.html">Book a Trip</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="login.html">admin</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-</nav>
 
-<main class="container">
-    
     <div class="login-container">
-        <h1>ADMINE</h1>
-
         <form id="loginForm">
-            
+            <h2>Connexion</h2>
             <div class="form-group">
-                <label for="username">Email ou Nom d'utilisateur :</label>
+                <label for="username">Nom d'utilisateur:</label>
                 <input type="text" id="username" name="username" required>
             </div>
-
             <div class="form-group">
-                <label for="password">Mot de passe :</label>
+                <label for="password">Mot de passe:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-
-            <div class="form-group" style="text-align: right; margin-bottom: 30px;">
-                <a href="#" style="font-size: 0.9em; color: #007bff;">Mot de passe oublié ?</a>
-            </div>
-            <button type="submit">Connexion</button>
+            <button type="submit">Se connecter</button>
+            <div id="loginError"></div>
         </form>
     </div>
 
-</main>
-
-
-<footer>
-    <p>Tous droits réservés © 2025 TESA Voyage - Projet DLA S1</p>
-</footer>
+    <!-- Lien vers le fichier JavaScript -->
 <script src="../JS/login.js"></script>
 <script src="../JS/script.js"></script>
+<script src="../JS/login.js"></script>
 </body>
 </html>
