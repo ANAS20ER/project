@@ -64,17 +64,17 @@ allLinks.forEach(function(link) {
         });
     }
 });
-// --- Message pour "Voir les détails" ---
-if (window.location.pathname.includes("offers.html")) {
+// // --- Message pour "Voir les détails" ---
+// if (window.location.pathname.includes("offers.html")) {
 
-    const detailButtons = document.querySelectorAll('.cta-button');
+//     const detailButtons = document.querySelectorAll('.cta-button');
 
-    detailButtons.forEach(function(btn) {
-        btn.addEventListener('click', function(event) {
-            event.preventDefault();
-            alert("Vous avez été victime d'une escroquerie :)");
-        });
-    });}
+//     detailButtons.forEach(function(btn) {
+//         btn.addEventListener('click', function(event) {
+//             event.preventDefault();
+//             alert("Vous avez été victime d'une escroquerie :)");
+//         });
+//     });}
 // ======================================================================================
 // je voulais ajouter quelques chose . mais je ne veux pas compilque les choses inulement :)
 // ======================================================================================

@@ -6,12 +6,120 @@
     <title>Détails de l'Offre - TESA</title>
     <link rel="stylesheet" href="../CSS/style.css">
     <style>
-        .detail-container { max-width: 900px; margin: 40px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; flex-direction: column; gap: 20px; }
-        .detail-container img { width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; }
-        .detail-header { text-align: center; }
-        .detail-price { font-size: 1.5em; color: #007bff; font-weight: bold; }
-        .retour-btn { align-self: flex-start; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; font-size: 1em; }
-        .retour-btn:hover { background-color: #0056b3; }
+        /* Styles de base pour le conteneur principal */
+        .detail-container { 
+            max-width: 900px; 
+            margin: 40px auto; 
+            padding: 20px; 
+            background: #fff; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+            display: flex; 
+            flex-direction: column; 
+            gap: 20px; 
+        }
+        /* Style pour l'image */
+        .detail-container img { 
+            width: 100%; 
+            max-height: 400px; 
+            object-fit: cover; 
+            border-radius: 8px; 
+        }
+        /* Style des titres */
+        .detail-header { 
+            text-align: center; 
+        }
+        /* Style du prix */
+        .detail-price { 
+            font-size: 1.5em; 
+            color: #007bff; 
+            font-weight: bold; 
+        }
+        /* Style du bouton de retour */
+        .retour-btn { 
+            align-self: flex-start; 
+            padding: 10px 20px; 
+            background-color: #007bff; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            text-decoration: none; 
+            font-size: 1em; 
+            transition: background-color 0.3s;
+        }
+        .retour-btn:hover { 
+            background-color: #0056b3; 
+        }
+
+        /* --- Nouveaux styles pour les détails --- */
+        .details-section {
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+        .details-section h2 {
+            font-size: 1.6em;
+            margin-bottom: 10px;
+            padding-left: 20px; /* Aligner un peu les titres de section */
+        }
+
+        /* Liste des highlights (Points Forts) */
+        .highlights-list {
+            list-style: none; /* Enlever la puce par défaut */
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .highlights-list li {
+            background-color: #e6f0ff; /* Bleu très clair */
+            color: #0056b3;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0, 123, 255, 0.1);
+        }
+        
+        /* Liste des Inclusions (Vert) */
+        .inclus-list {
+            list-style: none; 
+            padding-left: 0;
+        }
+        .inclus-list li::before {
+            content: '✅'; /* Coche verte */
+            margin-right: 10px;
+            font-size: 1.1em;
+        }
+        
+        /* Liste des Exclusions (Rouge) */
+        .non-inclus-list {
+            list-style: none; 
+            padding-left: 0;
+        }
+        .non-inclus-list li::before {
+            content: '❌'; /* Croix rouge */
+            margin-right: 10px;
+            font-size: 1.1em;
+        }
+        
+        /* Bouton de réservation */
+        #book-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        #book-btn:hover {
+            background-color: #1e7e34;
+        }
+
     </style>
 </head>
 <body>
@@ -24,16 +132,41 @@
     </nav>
     <main class="container">
         <div class="detail-container">
-            <button id="retour-btn" class="retour-btn">← Retour aux offres</button>
-            <img id="detail-image" src="" alt="">
+            <a href="offers.html" class="retour-btn">← Retour aux offres</a>
+            
+            <img id="detail-image" src="" alt="Image de l'offre">
+            
             <div class="detail-header">
-                <h1 id="detail-title"></h1>
+                <h1 id="detail-title">Chargement des détails...</h1>
                 <p id="detail-price" class="detail-price"></p>
             </div>
+            
             <p id="detail-description"></p>
+            
+            <div class="details-section" id="highlights-section">
+                <h2>⭐ Les points forts de cette offre</h2>
+                <ul id="details-highlights" class="highlights-list">
+                    </ul>
+            </div>
+
+            <div class="details-section" id="inclus-section">
+                <h2>✅ Ce qui est inclus dans le package</h2>
+                <ul id="details-inclus" class="inclus-list">
+                    </ul>
+            </div>
+
+            <div class="details-section" id="non-inclus-section">
+                <h2>❌ Ce qui n'est pas inclus (à prévoir)</h2>
+                <ul id="details-non-inclus" class="non-inclus-list">
+                    </ul>
+            </div>
+            
+            <button id="book-btn">Réserver cette offre</button>
+
         </div>
     </main>
     <footer><p>Tous droits réservés © 2025 TESA Voyage - Projet DLA S1</p></footer>
     <script src="../JS/infor.js" defer></script>
+    <script src="../JS/script.js"></script>
 </body>
 </html>
