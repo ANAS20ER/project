@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problème de paiement</title>
+    <link rel="stylesheet" href="paiefaq.css">
+</head>
+<body>
+<nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="destinations.html">Destination</a>
+            <ul class="dropdown-content">
+                <li><a href="domestic.html">Domestic Tourism</a></li>
+                <li><a href="international.html">External Travel</a></li>
+            </ul>
+        </li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="offers.html">Offers & Packages</a></li>
+        <li><a href="request.html">Book a Trip</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="login.html">admin</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+</nav>
+<section class="pay-container">
+    <h1>Problème de paiement</h1>
+    <p class="pay-desc">Besoin d’aide pour finaliser votre paiement ? Remplissez le formulaire ci-dessous.</p>
+
+    <form class="pay-form">
+        <label>Nom complet</label>
+        <input type="text" placeholder="Votre nom" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="email@example.com" required>
+
+        <label>ID de réservation (si existant)</label>
+        <input type="text" placeholder="Ex: RES-2025-01">
+
+        <label>Type de problème</label>
+        <select required>
+            <option value="">-- Sélectionnez --</option>
+            <option>Carte bancaire refusée</option>
+            <option>Erreur pendant le paiement</option>
+            <option>Double débit</option>
+            <option>Facture non reçue</option>
+            <option>Autre</option>
+        </select>
+
+        <label>Message</label>
+        <textarea rows="5" placeholder="Décrivez votre problème..."></textarea>
+
+        <button type="submit" class="submit-btn">Envoyer</button>
+    </form>
+</section>
+
+</body>
+</html>

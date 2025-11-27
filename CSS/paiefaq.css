@@ -1,0 +1,115 @@
+/* ---- GLOBAL ---- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #0066b2, #003366);
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 36px;
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* ---- CONTAINER ---- */
+.pay-container, .faq-container {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 40px;
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+}
+
+/* ---- FORM ---- */
+.pay-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.pay-form label {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.pay-form input,
+.pay-form select,
+.pay-form textarea {
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.pay-form input:focus,
+.pay-form select:focus,
+.pay-form textarea:focus {
+    box-shadow: 0 0 8px rgba(0, 170, 255, 0.6);
+}
+
+/* ---- BOUTON ---- */
+.submit-btn {
+    margin-top: 20px;
+    padding: 14px;
+    background: #00aaff;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.submit-btn:hover {
+    background: #0088cc;
+    transform: translateY(-3px);
+}
+
+/* ---- FAQ ---- */
+.faq-item {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.faq-item h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.faq-item p {
+    margin: 10px 0 0 0;
+    display: none;
+    font-size: 15px;
+}
+
+/* ---- FAQ hover animation ---- */
+.faq-item:hover {
+    background: rgba(0, 170, 255, 0.2);
+}
+
+/* ---- RESPONSIVE ---- */
+@media(max-width: 768px) {
+    .pay-container, .faq-container {
+        padding: 20px;
+        margin: 20px;
+    }
+}

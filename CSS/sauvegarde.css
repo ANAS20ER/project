@@ -1,0 +1,109 @@
+/* ====== RESET ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ====== PAGE ====== */
+body {
+    background: #f0f4f8;
+    padding: 40px 20px;
+}
+
+/* ====== CONTAINER ====== */
+.pro-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ====== CARD PRINCIPALE ====== */
+.pro-form-card {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.pro-form-card h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.pro-form-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* ====== BOUTON ====== */
+.pro-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 10px;
+    background: #3498db;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.pro-btn:hover {
+    background: #1d6fa5;
+}
+
+/* ====== LISTE DES DEMANDES ====== */
+#liste-demandes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ====== CARTE DEMANDE ====== */
+.pro-info-card {
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effet */
+.pro-info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Alternance des couleurs */
+.pro-info-card:nth-child(odd) {
+    background: #3498db; /* bleu */
+}
+
+.pro-info-card:nth-child(even) {
+    background: #1abc9c; /* turquoise */
+}
+
+/* TITRE DEMANDE */
+.pro-info-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+/* PARAGRAPHES */
+.pro-info-card p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fefefe;
+    margin-bottom: 6px;
+}
+
+/* Strong style */
+.pro-info-card p strong {
+    font-weight: 600;
+}
