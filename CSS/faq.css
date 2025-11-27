@@ -1,26 +1,74 @@
 /* faq.css */
 
+/* ======================================== */
+/* === CSS VARIABLES - LIGHT & DARK MODE === */
+/* ======================================== */
+
+:root {
+  /* Light Mode - Primary Colors */
+  --primary-color: #0056b3;
+  --primary-light: #0d6efd;
+  --secondary-color: #004080;
+  
+  /* Light Mode - Text Colors */
+  --text-primary: #333;
+  --text-secondary: #555;
+  --text-white: #ffffff;
+  
+  /* Light Mode - Background Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f0f0f0;
+  
+  /* Light Mode - Border & Shadow Colors */
+  --border-light: #e0e0e0;
+  --shadow-light: rgba(0,0,0,0.08);
+}
+
+/* Dark Mode Variables */
+:root.dark-mode {
+  /* Dark Mode - Primary Colors */
+  --primary-color: #0a58ca;
+  --primary-light: #31a8ff;
+  --secondary-color: #063d87;
+  
+  /* Dark Mode - Text Colors */
+  --text-primary: #e9ecef;
+  --text-secondary: #adb5bd;
+  --text-white: #f8f9fa;
+  
+  /* Dark Mode - Background Colors */
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  
+  /* Dark Mode - Border & Shadow Colors */
+  --border-light: #495057;
+  --shadow-light: rgba(0,0,0,0.3);
+}
+
 /* --- Styles Généraux et du Conteneur --- */
 body {
     font-family: Arial, sans-serif;
-    color: #333;
+    color: var(--text-primary);
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
     max-width: 800px;
     margin: 2rem auto;
     padding: 2rem;
-    background-color: #ffffff;
+    background-color: var(--bg-primary);
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px var(--shadow-light);
+    transition: background-color 0.3s ease;
 }
 
 /* --- Styles de la Navigation --- */
 .navbar {
-    background-color: #004080;
+    background-color: var(--secondary-color);
     padding: 0.5rem 1rem;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 .navbar ul {
     list-style: none;
@@ -28,10 +76,11 @@ body {
     margin: 0;
 }
 .navbar a {
-    color: white;
+    color: var(--text-white);
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+    transition: text-decoration 0.3s ease;
 }
 .navbar a:hover {
     text-decoration: underline;
@@ -40,14 +89,15 @@ body {
 /* --- Styles Spécifiques à la FAQ --- */
 .faq-title {
     text-align: center;
-    color: #004080;
+    color: var(--secondary-color);
     margin-bottom: 2rem;
     font-size: 2.2rem;
+    transition: color 0.3s ease;
 }
 
 .faq-item {
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--border-light);
     padding-bottom: 1.5rem;
     transition: all 0.3s ease;
 }
@@ -58,18 +108,20 @@ body {
 
 .faq-question {
     font-size: 1.2rem;
-    color: #0056b3;
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
     cursor: pointer; /* Indique que l'élément est cliquable */
     font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 .faq-answer {
-    color: #555;
+    color: var(--text-secondary);
     font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
 /* Effet au survol de la question */
 .faq-question:hover {
-    color: #003d7a;
+    color: var(--primary-light);
 }

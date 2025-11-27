@@ -2,9 +2,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 /* ======================================== */
+/* === CSS VARIABLES - LIGHT & DARK MODE === */
+/* ======================================== */
+
+:root {
+  /* Light Mode - Primary Colors */
+  --primary-color: #007bff;
+  --primary-dark: #0056b3;
+  --primary-light: #0d6efd;
+  
+  /* Light Mode - Secondary Colors */
+  --secondary-color: #0056b3;
+  --secondary-light: #00306b;
+  --secondary-dark: #003e87;
+  
+  /* Light Mode - Text Colors */
+  --text-primary: #333;
+  --text-secondary: #555;
+  --text-light: #777;
+  --text-dark: #222;
+  --text-white: #ffffff;
+  
+  /* Light Mode - Background Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f0f0f0;
+  --bg-light: #f5f5f5;
+  --bg-gradient: linear-gradient(to bottom right, #fff, #003366);
+  
+  /* Light Mode - Border & Shadow Colors */
+  --border-color: #e0e0e0;
+  --border-light: #e9ecef;
+  --border-dark: #ddd;
+  --shadow-light: rgba(0,0,0,0.05);
+  --shadow-medium: rgba(0,0,0,0.1);
+  --shadow-dark: rgba(0,0,0,0.15);
+  
+  /* Light Mode - UI Colors */
+  --logo-color: #111;
+  --nav-text: #555;
+  --nav-hover-bg: #f0f0f0;
+  --nav-hover-text: #0056b3;
+  --footer-bg: #333;
+  --footer-text: #aaa;
+}
+
+/* Dark Mode Variables */
+:root.dark-mode {
+  /* Dark Mode - Primary Colors */
+  --primary-color: #0d6efd;
+  --primary-dark: #0a58ca;
+  --primary-light: #31a8ff;
+  
+  /* Dark Mode - Secondary Colors */
+  --secondary-color: #0a58ca;
+  --secondary-light: #1a73b8;
+  --secondary-dark: #063d87;
+  
+  /* Dark Mode - Text Colors */
+  --text-primary: #e9ecef;
+  --text-secondary: #adb5bd;
+  --text-light: #95a5a6;
+  --text-dark: #ecf0f1;
+  --text-white: #f8f9fa;
+  
+  /* Dark Mode - Background Colors */
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-light: #3a3a3a;
+  --bg-gradient: linear-gradient(to bottom right, #1a1a1a, #0f1a2e);
+  
+  /* Dark Mode - Border & Shadow Colors */
+  --border-color: #495057;
+  --border-light: #373737;
+  --border-dark: #4a4a4a;
+  --shadow-light: rgba(0,0,0,0.3);
+  --shadow-medium: rgba(0,0,0,0.5);
+  --shadow-dark: rgba(0,0,0,0.7);
+  
+  /* Dark Mode - UI Colors */
+  --logo-color: #e9ecef;
+  --nav-text: #adb5bd;
+  --nav-hover-bg: #3a3a3a;
+  --nav-hover-text: #31a8ff;
+  --footer-bg: #0f0f0f;
+  --footer-text: #686c71;
+}
+
+/* ======================================== */
 /* === SECTION RESPONSIVE POUR MOBILE === */
 /* ======================================== */
-/*nor din ha hoa code css la kbir bzaaaaaf */
 
 .container {
     max-width: 1200px;
@@ -57,9 +143,10 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom right, #fff, #003366);
-    color: #333;
+    background: var(--bg-gradient);
+    color: var(--text-primary);
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -67,33 +154,36 @@ body {
     max-width: 1280px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    background-color: var(--bg-primary);
+    box-shadow: 0 4px 12px var(--shadow-light);
     border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Titres */
 h1, h2, h3 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    color: #222;
+    color: var(--text-dark);
 }
 
 /* --- Barre de Navigation --- */
 .navbar {
-    background-color: #ffffff;
+    background-color: var(--bg-primary);
     padding: 10px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px var(--shadow-medium);
+    transition: background-color 0.3s ease;
 }
 
 .navbar .logo a {
-    color: #111;
+    color: var(--logo-color);
     text-decoration: none;
     font-size: 24px;
     font-weight: 700;
+    transition: color 0.3s ease;
 }
 
 .nav-links {
@@ -109,7 +199,7 @@ h1, h2, h3 {
 
 /* Liens */
 .nav-links a {
-    color: #555;
+    color: var(--nav-text);
     text-decoration: none;
     padding: 10px 18px;
     display: block;
@@ -120,34 +210,36 @@ h1, h2, h3 {
 }
 
 .nav-links a:hover {
-    background-color: #f0f0f0;
-    color: #0056b3;
+    background-color: var(--nav-hover-bg);
+    color: var(--nav-hover-text);
 }
 
 /* --- Menu Déroulant --- */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ffffff;
+    background-color: var(--bg-primary);
     min-width: 200px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    box-shadow: 0px 8px 16px var(--shadow-medium);
     z-index: 1;
     border-radius: 8px;
     overflow: hidden;
     padding: 0;
     margin: 0;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown-content a {
     margin: 0;
     border-radius: 0;
-    color: #555;
+    color: var(--nav-text);
     padding: 12px 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: #0056b3;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--text-white);
 }
 
 .dropdown:hover .dropdown-content {
@@ -174,8 +266,8 @@ h1, h2, h3 {
 
 /* Bouton CTA */
 .cta-button {
-    background-color: #007bff;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-white);
     padding: 12px 24px;
     text-decoration: none;
     border-radius: 6px;
@@ -183,11 +275,11 @@ h1, h2, h3 {
     margin-top: 20px;
     display: inline-block;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 6px var(--shadow-medium);
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+    background-color: var(--primary-dark);
     transform: translateY(-2px);
 }
 
@@ -199,17 +291,17 @@ h1, h2, h3 {
 }
 
 .card {
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px var(--shadow-light);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #ffffff;
+    background-color: var(--bg-primary);
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px var(--shadow-medium);
 }
 
 .card img {
@@ -230,22 +322,23 @@ h1, h2, h3 {
 footer {
     text-align: center;
     padding: 30px 20px;
-    background-color: #333;
-    color: #aaa;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
     margin-top: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* --- Blog --- */
 .post-meta {
     font-size: 0.9em;
-    color: #777;
+    color: var(--text-light);
     margin-bottom: 10px;
 }
 
 .video-section {
     margin-top: 40px;
     padding-top: 20px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--border-light);
     text-align: center;
 }
 
@@ -256,7 +349,7 @@ footer {
     max-width: 800px;
     margin: 20px auto 0;
     padding-top: 56.25%;
-    background-color: #f0f0f0;
+    background-color: var(--bg-secondary);
     border-radius: 8px;
 }
 
@@ -278,40 +371,40 @@ footer {
 .contact-form label {
     margin-top: 15px;
     font-weight: 500;
+    color: var(--text-primary);
 }
 
 .contact-form input,
 .contact-form textarea {
     padding: 12px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #007bff;
+    border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(0,123,255,0.2);
 }
 
 .contact-form button {
     margin-top: 20px;
     padding: 15px;
-    background-color: #007bff;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-white);
     border: none;
     cursor: pointer;
     font-size: 18px;
     font-weight: 700;
     border-radius: 6px;
     transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #0056b3;
 }
 
 .map iframe {
@@ -351,12 +444,15 @@ footer {
         margin: 5px 0;
     }
 
+/* --- Responsive Media Query --- */
+@media (max-width: 768px) {
     .dropdown-content {
         position: static;
         width: 100%;
         box-shadow: none;
-        background-color: #f0f0f0;
+        background-color: var(--nav-hover-bg);
     }
+}
 
     .hero-text h1 {
         font-size: 2.2rem;
@@ -380,11 +476,11 @@ footer {
 .blog-post {
     margin-top: 30px;
     padding-bottom: 30px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border-light);
 }
 
 .blog-post h2 {
-    color: #0056b3;
+    color: var(--primary-color);
     margin-bottom: 5px;
 }
 
@@ -398,8 +494,8 @@ footer {
 }
 
 .nav-links .active-link a {
-    background-color: #f0f0f0;
-    color: #0056b3;
+    background-color: var(--nav-hover-bg);
+    color: var(--nav-hover-text);
     font-weight: 700;
 }
 
@@ -413,12 +509,13 @@ footer {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: #007bff;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-white);
     cursor: pointer;
     padding: 12px 16px;
     border-radius: 1000px;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 6px var(--shadow-medium);
+    transition: background-color 0.3s ease;
 }
 
 /* Animations */
@@ -446,7 +543,7 @@ body.page-fade-out {
 /* Style du bouton de thème */
 .theme-btn {
     background: none;
-    border: 2px solid #333;
+    border: 2px solid var(--text-primary);
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -454,9 +551,10 @@ body.page-fade-out {
     font-size: 1.2rem;
     margin-left: 15px;
     transition: all 0.3s ease;
+    color: var(--text-primary);
 }
 
 .theme-btn:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
 }

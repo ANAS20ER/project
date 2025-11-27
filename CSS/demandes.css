@@ -1,21 +1,68 @@
+/* ======================================== */
+/* === CSS VARIABLES - LIGHT & DARK MODE === */
+/* ======================================== */
+
+:root {
+  /* Light Mode - Primary Colors */
+  --primary-color: #2980b9;
+  --secondary-color: #3498db;
+  --accent-color: #1abc9c;
+  
+  /* Light Mode - Text Colors */
+  --text-primary: #333;
+  --text-light: #555;
+  --text-white: #fff;
+  
+  /* Light Mode - Background Colors */
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #fff;
+  
+  /* Light Mode - Shadow Colors */
+  --shadow-light: rgba(0,0,0,0.1);
+}
+
+/* Dark Mode Variables */
+:root.dark-mode {
+  /* Dark Mode - Primary Colors */
+  --primary-color: #2b6fa6;
+  --secondary-color: #3a8fd4;
+  --accent-color: #16b8a3;
+  
+  /* Dark Mode - Text Colors */
+  --text-primary: #e9ecef;
+  --text-light: #adb5bd;
+  --text-white: #f8f9fa;
+  
+  /* Dark Mode - Background Colors */
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  
+  /* Dark Mode - Shadow Colors */
+  --shadow-light: rgba(0,0,0,0.3);
+}
+
 /* ======== Style général ======== */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    color: #333;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1 {
     text-align: center;
-    color: #2c3e50;
+    color: var(--primary-color);
     margin-bottom: 10px;
+    transition: color 0.3s ease;
 }
 
 p {
     text-align: center;
-    color: #555;
+    color: var(--text-light);
     margin-bottom: 30px;
+    transition: color 0.3s ease;
 }
 
 /* ======== Tableau ======== */
@@ -23,13 +70,14 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: var(--bg-secondary);
+    box-shadow: 0 2px 5px var(--shadow-light);
+    transition: background-color 0.3s ease;
 }
 
 thead {
-    background-color: #2980b9;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-white);
 }
 
 thead th {
@@ -43,7 +91,7 @@ tbody td {
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: var(--bg-secondary);
 }
 
 tbody tr:hover {
@@ -56,7 +104,7 @@ button {
     margin: 0 auto;
     padding: 12px 25px;
     font-size: 16px;
-    color: #fff;
+    color: var(--text-white);
     background-color: #e74c3c;
     border: none;
     border-radius: 5px;
