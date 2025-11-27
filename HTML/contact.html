@@ -11,64 +11,61 @@
 
 <body>
     <nav class="navbar">
-    <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li class="dropdown">
-            <a href="destinations.html">Destination</a>
-            <ul class="dropdown-content">
-                <li><a href="domestic.html">Domestic Tourism</a></li>
-                <li><a href="international.html">External Travel</a></li>
-            </ul>
-        </li>
-        <li><a href="services.html">Our Services</a></li>
-        <li><a href="offers.html">Offers & Packages</a></li>
-        <li><a href="request.html">Book a Trip</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="login.html">admin</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-</nav>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="destinations.html">Destination</a>
+                <ul class="dropdown-content">
+                    <li><a href="domestic.html">Domestic Tourism</a></li>
+                    <li><a href="international.html">External Travel</a></li>
+                </ul>
+            </li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="offers.html">Offers & Packages</a></li>
+            <li><a href="request.html">Book a Trip</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="login.html">admin</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
     <header class="pro-header">
         <h1>Contactez-nous</h1>
         <p>Notre équipe est disponible pour répondre à toutes vos questions.</p>
     </header>
 
     <section class="pro-container">
-
         <!-- FORMULAIRE -->
         <div class="pro-form-card">
-            
             <h2><i class="fa-solid fa-envelope"></i> Envoyer un message</h2>
-
-            <form id="pro-form" action="sauvegarde.html" method="GET">
-    
-
-
+            
+            <!-- Supprimé l'action et la méthode du formulaire, tout sera géré par JavaScript -->
+            <form id="pro-form">
                 <h3 class="section-title">Informations personnelles</h3>
-
+                
                 <div class="pro-two">
                     <div>
-                        <label>Nom complet</label>
+                        <label for="pro-name">Nom complet</label>
                         <input type="text" id="pro-name" name="pro-name" placeholder="Votre nom" required>
                     </div>
-
+                    
                     <div>
-                        <label>Email</label>
+                        <label for="pro-email">Email</label>
                         <input type="email" id="pro-email" name="pro-email" placeholder="example@gmail.com" required>
                     </div>
                 </div>
-
+                
                 <div class="pro-row">
-                    <label>Téléphone</label>
+                    <label for="pro-phone">Téléphone</label>
                     <input type="tel" id="pro-phone" name="pro-phone" placeholder="+212 6 XX XX XX XX">
                 </div>
-
+                
                 <h3 class="section-title">Votre demande</h3>
-
+                
                 <div class="pro-row">
-                    <label>Sujet</label>
-                    <select id="pro-subject" required>
+                    <label for="pro-subject">Sujet</label>
+                    <select id="pro-subject" name="pro-subject" required>
                         <option value="">-- Choisir un sujet --</option>
                         <option value="devis">Demande de devis personnalisé</option>
                         <option value="info">Informations sur un voyage</option>
@@ -78,42 +75,39 @@
                         <option value="autre">Autre demande</option>
                     </select>
                 </div>
-
+                
                 <div class="pro-row">
-                    <label>Message</label>
+                    <label for="pro-message">Message</label>
                     <textarea id="pro-message" name="pro-message" rows="6" placeholder="Décrivez votre demande..." required></textarea>
                 </div>
-
-              <button type="button" class="pro-btn" onclick="sauvegarderEtRediriger()">
-    <i class="fa-solid fa-paper-plane"></i> Envoyer
-</button>
-
-
-                <p id="pro-status"></p>
-
+                
+                <!-- Changé le type en submit pour utiliser l'event listener -->
+                <button type="submit" class="pro-btn">
+                    <i class="fa-solid fa-paper-plane"></i> Envoyer
+                </button>
+                
+                <div id="pro-status" class="status-message"></div>
             </form>
         </div>
-
+        
         <!-- INFO + SUPPORT -->
         <div class="pro-info-card">
-
             <h2><i class="fa-solid fa-headset"></i> Support client</h2>
-
+            
             <p><strong>📞 Téléphone :</strong> +212 6 44 55 66 77</p>
             <p><strong>✉️ Email :</strong> support@travelworld.ma</p>
             <p><strong>⏰ Horaires :</strong> 9h–19h (Lun–Sam)</p>
-
+            
             <h3>Assistance rapide</h3>
-
+            
             <div class="pro-quick">
-    <button id="btn-suivi"><i class="fa-solid fa-ticket"></i> Suivre une réservation</button>
-    <button id="btn-paiement"><i class="fa-solid fa-credit-card"></i> Problème de paiement</button>
-    <button id="btn-faq"><i class="fa-solid fa-circle-info"></i> Questions générales</button>
+                <button id="btn-suivi"><i class="fa-solid fa-ticket"></i> Suivre une réservation</button>
+                <button id="btn-paiement"><i class="fa-solid fa-credit-card"></i> Problème de paiement</button>
+                <button id="btn-faq"><i class="fa-solid fa-circle-info"></i> Questions générales</button>
             </div>
-
-
+            
             <h3>Localisation</h3>
-
+            
             <div class="pro-map">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13393.916421612491!2d-7.624!3d33.589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd2a43df4797%3A0x3f1b4b8eae1b8b!2sCasablanca!5e0!3m2!1sfr!2sma!4v123456789" 
@@ -121,37 +115,9 @@
                 </iframe>
             </div>
         </div>
-
     </section>
 
+    <!-- Script externe unique -->
     <script src="contact.js"></script>
-   <script>
-function sauvegarderEtRediriger() {
-
-    const nom = document.getElementById("pro-name").value;
-    const email = document.getElementById("pro-email").value;
-    const phone = document.getElementById("pro-phone").value;
-    const subject = document.getElementById("pro-subject").value;
-    const message = document.getElementById("pro-message").value;
-
-    const demande = {
-        nom,
-        email,
-        phone,
-        subject,
-        message,
-        date: new Date().toLocaleString()
-    };
-
-    let demandes = JSON.parse(localStorage.getItem("demandes")) || [];
-    demandes.push(demande);
-
-    localStorage.setItem("demandes", JSON.stringify(demandes));
-
-    window.location.href = "sauvegarde.html";
-}
-</script>
-
-
 </body>
 </html>

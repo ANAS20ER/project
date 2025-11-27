@@ -121,3 +121,27 @@ input:focus, select:focus, textarea:focus {
     overflow: hidden;
     margin-top: 10px;
 }
+.status-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    display: none; /* Caché par défaut */
+    font-weight: 500;
+}
+
+/* Styles pour les différents types de messages */
+.status-message.error {
+    background-color: #ffebee;
+    border: 1px solid #f8bbd9;
+}
+
+.status-message.success {
+    background-color: #e8f5e9;
+    border: 1px solid #c8e6c9;
+}
+
+.status-message.loading {
+    background-color: #e3f2fd;
+    border: 1px solid #bbdefb;
+}
