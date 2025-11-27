@@ -3,8 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom right, #0066b2, #003366);
-    color: #fff;
+    background: linear-gradient(to bottom right, #fff, #003366);
 }
 
 h1 {
@@ -64,7 +63,7 @@ p {
 .submit-btn {
     margin-top: 20px;
     padding: 14px;
-    background: #00aaff;
+   /*background: #00aaff;*/
     border: none;
     border-radius: 10px;
     font-size: 17px;
