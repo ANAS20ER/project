@@ -227,4 +227,18 @@ window
         disableDarkMode();
       }
     }
+    // script.js - Version simplifiée pour l'animation CSS
+
+document.addEventListener('DOMContentLoaded', () => {
+    // --- GESTION DU MENU MOBILE ---
+    const navToggle = document.querySelector('.nav-toggle');
+    const navbar = document.querySelector('.navbar');
+
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    }
+    // --- PLUS BESOIN DE CODE POUR L'ANIMATION DU PERSONNAGE ---
+});
   });
