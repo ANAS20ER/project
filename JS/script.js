@@ -206,7 +206,7 @@ function disableDarkMode() {
 function updateThemeToggleButton(isDarkMode) {
   const themeBtn = document.querySelector(".theme-btn");
   if (themeBtn) {
-    themeBtn.innerHTML = isDarkMode ? "☀️" : "🌙";
+    themeBtn.innerHTML = isDarkMode ?  "🌙" : "☀️";
     themeBtn.setAttribute(
       "aria-label",
       isDarkMode ? "Switch to light mode" : "Switch to dark mode"
