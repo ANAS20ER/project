@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord | TravelWorld Admin</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="../index.html">Voir le site</a></li>
+            <li><a href="dashboard.html">Tableau de Bord</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Tableau de Bord d'Administration</h1>
+            <p>Bienvenue, Anas. Voici les dernières activités.</p>
+        </header>
+
+        <section class="section">
+            <h2><i class="fa-solid fa-envelope"></i> Messages de Contact</h2>
+            <div id="contact-messages">
+            </div>
+        </section>
+        <section class="section">
+            <h2><i class="fa-solid fa-plane"></i> Demandes de Voyage</h2>
+            <div id="trip-requests">
+            </div>
+        </section>
+        <p>Voir toutes les réservations : <a href="demandes.html">Liste des réservations</a></p>
+        <button class="logout-btn" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</button>
+    </div>
+
+    <script src="../JS/dashboard.js"></script>
+</body>
+</html>

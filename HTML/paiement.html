@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution de Paiement | TESA Voyage</title>
+    <link rel="stylesheet" href="../CSS/paiement.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="../index.html">TESA Voyage</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <main class="payment-container">
+        <h1><i class="fa-solid fa-credit-card"></i> Solution de Paiement</h1>
+        <p>Choisissez votre méthode de paiement préférée pour finaliser votre réservation en toute sécurité.</p>
+        
+        <form id="payment-form">
+            <div class="form-group">
+                <label for="payment-method">1. Choisissez une méthode de paiement</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="">-- Sélectionner --</option>
+                    <option value="card">Payer par Carte Bancaire</option>
+                    <option value="transfer">Payer par Virement Bancaire</option>
+                    <option value="agency">Payer en Agence</option>
+                </select>
+            </div>
+
+            <!-- Détails pour le paiement par carte (caché par défaut) -->
+            <div id="card-details" class="payment-details hidden">
+                <h2><i class="fa-solid fa-lock"></i> Paiement Sécurisé par Carte</h2>
+                <p>Nous utilisons une passerelle de paiement 100% sécurisée (SSL) pour protéger vos informations.</p>
+                <div class="simulated-form">
+                    <p><strong>Numéro de carte:</strong> **** **** **** ****</p>
+                    <p><strong>Titulaire:</strong> [Votre Nom]</p>
+                </div>
+                <button type="button" class="proceed-btn" data-method="card">
+                    <i class="fa-solid fa-arrow-right"></i> Procéder au Paiement Sécurisé
+                </button>
+            </div>
+
+            <!-- Détails pour le virement (caché par défaut) -->
+            <div id="transfer-details" class="payment-details hidden">
+                <h2><i class="fa-solid fa-building-columns"></i> Virement Bancaire</h2>
+                <p>Veuillez effectuer un virement vers notre compte en utilisant les coordonnées ci-dessous. La réservation sera confirmée à réception du paiement.</p>
+                <div class="bank-info">
+                    <p><strong>Banque:</strong> BANQUE MAROCAIRE</p>
+                    <p><strong>Titulaire du compte:</strong> TESA Voyage</p>
+                    <p><strong>IBAN:</strong> MA64 0000 0000 0000 0000 0000 000</p>
+                    <p><strong>Référence:</strong> [Votre Numéro de Réservation]</p>
+                </div>
+                <button type="button" class="proceed-btn" data-method="transfer">
+                    <i class="fa-solid fa-check"></i> J'ai compris les instructions
+                </button>
+            </div>
+
+            <!-- Détails pour le paiement en agence (caché par défaut) -->
+            <div id="agency-details" class="payment-details hidden">
+                <h2><i class="fa-solid fa-store"></i> Paiement en Agence</h2>
+                <p>Vous pouvez régler le montant de votre réservation directement dans l'une de nos agences. Merci d'apporter une pièce d'identité et votre numéro de réservation.</p>
+                <div class="agency-info">
+                    <p><strong>Agence Principale Casablanca:</strong></p>
+                    <p>123, Avenue Hassan II, Casablanca</p>
+                    <p><strong>Téléphone:</strong> +212 6 44 55 66 77</p>
+                    <p><strong>Horaires:</strong> 9h - 19h (Lun - Sam)</p>
+                </div>
+                <button type="button" class="proceed-btn" data-method="agency">
+                    <i class="fa-solid fa-map-marked-alt"></i> Voir l'Agence sur la Carte
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 TESA Voyage. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../JS/paiement.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+/* faq.css - Version corrigée pour fonctionner avec votre JS */
+
+/* --- Variables et Styles de Base --- */
+:root {
+    --primary-color: #004080;
+    --secondary-color: #0056b3;
+    --accent-color: #28a745;
+    --light-color: #f4f7f6;
+    --dark-color: #333;
+    --white-color: #ffffff;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+
+/* --- Navigation et Footer --- */
+.navbar, .site-footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.navbar ul, .site-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a, .site-footer a {
+    color: var(--white-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.navbar a:hover, .site-footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- Conteneur Principal de la FAQ --- */
+.faq-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.faq-header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.faq-header p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* --- Liste des Questions --- */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+}
+
+.faq-item {
+    background: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    user-select: none; /* Empêche la sélection de texte au clic */
+}
+
+.faq-question h3 {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.faq-question i {
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+}
+
+/* --- C'EST LA PARTIE LA PLUS IMPORTANTE --- */
+/* Par défaut, la réponse est cachée */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 1.5rem;
+    background-color: #f9f9f9;
+}
+
+/* Quand l'élément parent a la classe 'active', la réponse devient visible */
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Une valeur suffisamment grande */
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+/* Quand l'élément parent a la classe 'active', on tourne l'icône */
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+/* --- Section Contact en Bas de Page --- */
+.faq-contact {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.faq-contact h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.faq-contact p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .faq-container {
+        padding: 1rem;
+    }
+
+    .faq-header h1 {
+        font-size: 2rem;
+    }
+
+    .faq-question {
+        padding: 1.2rem;
+    }
+
+    .faq-question h3 {
+        font-size: 1.1rem;
+    }
+}

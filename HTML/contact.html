@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactez-Nous - TESA Voyage</title>
+    <title>Contact | TravelWorld</title>
+    <link rel="stylesheet" href="../CSS/contact.css">
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-
     <nav class="navbar">
-        <div class="logo">
-            <a href="../index.html">TS</a>
-        </div>
         <ul class="nav-links">
             <li><a href="../index.html">Home</a></li>
             <li class="dropdown">
@@ -27,65 +25,101 @@
             <li><a href="request.html">Book a Trip</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="login.html">Login</a></li>
+            <li><a href="login.html">admin</a></li>
             <li><a href="contact.html">Contact Us</a></li>
+            <li><button class="theme-btn"></button></li>
         </ul>
     </nav>
+    
+    <header class="pro-header">
+        <h1>Contactez-nous</h1>
+        <p>Notre équipe est disponible pour répondre à toutes vos questions.</p>
+    </header>
 
-    <main class="container">
-
-        <h1>Contactez-Nous</h1>
-        <p>Vous avez une question ? Prêt à réserver le voyage de vos rêves ? Remplissez le formulaire ci-dessous ou contactez-nous directement.</p>
-
-        <section class="contact-form-section">
-            <h2>Envoyez-nous un message</h2>
-
-            <form id="inscriptionForm" class="contact-form" action="mailto:votre-email@agence.com" method="post" enctype="text/plain">
-
-                <label for="name">Votre Nom :</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Votre Email :</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="subject">Sujet :</label>
-                <input type="text" id="subject" name="subject">
-
-                <label for="message">Votre Message :</label>
-                <textarea id="message" name="message" rows="5" maxlength="500" required></textarea>
-                <div style="text-align: right; font-size: 0.8rem; color: #666; margin-bottom: 15px;">
-                    <span id="char-count">0</span> / 500 caractères
+    <section class="pro-container">
+        <!-- FORMULAIRE -->
+        <div class="pro-form-card">
+            <h2><i class="fa-solid fa-envelope"></i> Envoyer un message</h2>
+            
+            <!-- Supprimé l'action et la méthode du formulaire, tout sera géré par JavaScript -->
+            <form id="pro-form">
+                <h3 class="section-title">Informations personnelles</h3>
+                
+                <div class="pro-two">
+                    <div>
+                        <label for="pro-name">Nom complet</label>
+                        <input type="text" id="pro-name" name="pro-name" placeholder="Votre nom" required>
+                    </div>
+                    
+                    <div>
+                        <label for="pro-email">Email</label>
+                        <input type="email" id="pro-email" name="pro-email" placeholder="example@gmail.com" required>
+                    </div>
                 </div>
-
-                <button type="submit">Envoyer le Message</button>
+                
+                <div class="pro-row">
+                    <label for="pro-phone">Téléphone</label>
+                    <input type="tel" id="pro-phone" name="pro-phone" placeholder="+212 6 XX XX XX XX">
+                </div>
+                
+                <h3 class="section-title">Votre demande</h3>
+                
+                <div class="pro-row">
+                    <label for="pro-subject">Sujet</label>
+                    <select id="pro-subject" name="pro-subject" required>
+                        <option value="">-- Choisir un sujet --</option>
+                        <option value="devis">Demande de devis personnalisé</option>
+                        <option value="info">Informations sur un voyage</option>
+                        <option value="modif">Modification / Annulation</option>
+                        <option value="support">Problème technique ou paiement</option>
+                        <option value="partenariat">Partenariat / Collaboration</option>
+                        <option value="autre">Autre demande</option>
+                    </select>
+                </div>
+                
+                <div class="pro-row">
+                    <label for="pro-message">Message</label>
+                    <textarea id="pro-message" name="pro-message" rows="6" placeholder="Décrivez votre demande..." required></textarea>
+                </div>
+                
+                <!-- Changé le type en submit pour utiliser l'event listener -->
+                <button type="submit" class="pro-btn">
+                    <i class="fa-solid fa-paper-plane"></i> Envoyer
+                </button>
+                
+                <div id="pro-status" class="status-message"></div>
             </form>
-        </section>
+        </div>
+        
+        <!-- INFO + SUPPORT -->
+        <div class="pro-info-card">
+            <h2><i class="fa-solid fa-headset"></i> Support client</h2>
+            
+            <p><strong>📞 Téléphone :</strong> +212 6 44 55 66 77</p>
+            <p><strong>✉️ Email :</strong> support@travelworld.ma</p>
+            <p><strong>⏰ Horaires :</strong> 9h–19h (Lun–Sam)</p>
+            
+            <h3>Assistance rapide</h3>
+            
+            <div class="pro-quick">
+                <button id="btn-suivi"><i class="fa-solid fa-ticket"></i> Suivre une réservation</button>
+                <button id="btn-paiement"><i class="fa-solid fa-credit-card"></i> Problème de paiement</button>
+                <button id="btn-faq"><i class="fa-solid fa-circle-info"></i> Questions générales</button>
+            </div>
+            
+            <h3>Localisation</h3>
+            
+            <div class="pro-map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13393.916421612491!2d-7.624!3d33.589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd2a43df4797%3A0x3f1b4b8eae1b8b!2sCasablanca!5e0!3m2!1sfr!2sma!4v123456789" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
 
-        <section class="contact-details" style="margin-top: 40px;">
-            <h2>Nos Coordonnées</h2>
-            <p><strong>Adresse :</strong> Rue asswane loubens angle roudte des oulesd ziane , Casablanca</p>
-            <p><strong>Téléphone :</strong> +212 1 23 45 67 89</p>
-            <p><strong>Email :</strong> <a href="mailto:info@agence.com">info@agence.com</a></p>
-            <p><strong>Horaires :</strong> Lundi - Vendredi, 09h00 - 18h00</p>
-        </section>
-
-        <section class="map" style="margin-top: 30px;">
-            <h2>Où nous trouver</h2>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.23067839665!2d-7.619018984796707!3d33.59922098073108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2f9b1d3e3f7%3A0x8f7f5b3a3b5c1a7!2sCasablanca!5e0!3m2!1sen!2sma!4v1678886055584!5m2!1sen!2sma" 
-                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-            </iframe>
-        </section>
-
-    </main>
-
-    <button id="scrollToTopBtn" title="UP">⇕</button>
-
-    <footer>
-        <p>Tous droits réservés © 2025 TESA Voyage - Projet DLA S1</p>
-    </footer>
-
+    <!-- Script externe unique -->
+    <script src="../JS/contact.js"></script>
     <script src="../JS/script.js"></script>
-
 </body>
 </html>

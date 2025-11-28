@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sauvegarde des demandes</title>
+       <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/sauvegarde.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="destinations.html">Destination</a>
+                <ul class="dropdown-content">
+                    <li><a href="domestic.html">Domestic Tourism</a></li>
+                    <li><a href="international.html">External Travel</a></li>
+                </ul>
+            </li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="offers.html">Offers & Packages</a></li>
+            <li><a href="request.html">Book a Trip</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><button class="theme-btn"></button></li>
+        </ul>
+    </nav>
+<section class="pro-container">
+    <div class="pro-form-card">
+        <h1>📄 Toutes les demandes envoyées</h1>
+        <p>Voici la liste complète des messages envoyés depuis la page Contact :</p>
+
+        <div id="liste-demandes"></div>
+
+        <a href="contact.html" class="pro-btn" style="margin-top:20px; display:inline-block;">
+            Retour à Contact
+        </a>
+    </div>
+</section>
+
+<script>
+// Récupérer toutes les demandes sauvegardées
+let demandes = JSON.parse(localStorage.getItem("demandes")) || [];
+
+// Conteneur pour afficher la liste
+let container = document.getElementById("liste-demandes");
+
+// Affichage vide si aucune demande
+if (demandes.length === 0) {
+    container.innerHTML = "<p>Aucune demande pour le moment.</p>";
+} else {
+    // Afficher toutes les demandes (de la plus récente à l’ancienne)
+    container.innerHTML = demandes.reverse().map((d, index) => `
+        <div class="pro-info-card" style="margin-bottom:20px;">
+            <h3>Demande #${demandes.length - index} — ${d.date}</h3>
+            <p><strong>Nom:</strong> ${d.nom}</p>
+            <p><strong>Email:</strong> ${d.email}</p>
+            <p><strong>Téléphone:</strong> ${d.phone}</p>
+            <p><strong>Sujet:</strong> ${d.subject}</p>
+            <p><strong>Message:</strong> ${d.message}</p>
+        </div>
+    `).join("");
+}
+</script>
+
+</body>
+</html>
