@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // faq.js - Version corrigée et améliorée
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -24,11 +24,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-=======
-document.querySelectorAll(".faq-item").forEach(item => {
-    item.addEventListener("click", () => {
-        const p = item.querySelector("p");
-        p.style.display = p.style.display === "block" ? "none" : "block";
-    });
-});
->>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* ======================================== */
 /* === CSS VARIABLES - LIGHT & DARK MODE === */
 /* ======================================== */
@@ -50,11 +49,6 @@
             font-family: sans-serif; 
             color: var(--text-primary);
             transition: background-color 0.3s ease, color 0.3s ease;
-=======
-        body { 
-            font-family: sans-serif; 
-            color: #333; 
->>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
         }
         .container { 
             max-width: 1200px; 
@@ -64,7 +58,6 @@
         header { 
             text-align: center; margin-bottom: 2rem; }
         h1 { 
-<<<<<<< HEAD
             color: var(--primary-color); }
         .section { 
             background: var(--bg-primary); margin-bottom: 2rem; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px var(--shadow-light); }
@@ -82,22 +75,4 @@
             background-color: var(--danger-dark); }
         .empty-message { 
             text-align: center; color: var(--text-secondary); font-style: italic; }
-=======
-            color: #0056b3; }
-        .section { 
-            background: #fff; margin-bottom: 2rem; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        h2 { 
-            border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
-        table { 
-            width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { 
-            padding: 0.8rem; text-align: left; border-bottom: 1px solid #ddd; }
-        th { 
-            background-color: #f2f2f2; }
-        .logout-btn { 
-            background-color: #dc3545; color: white; padding: 0.7rem 1.5rem; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem; }
-        .logout-btn:hover { 
-            background-color: #c82333; }
-        .empty-message { 
-            text-align: center; color: #777; font-style: italic; }
->>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
+

@@ -57,13 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <table>
                 <thead>
                     <tr>
-                        <th>Date de la demande</th>
                         <th>Nom</th>
                         <th>Email</th>
                         <th>Téléphone</th>
                         <th>Destination</th>
-                        <th>Date de voyage</th>
-                        <th>Personnes</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -72,13 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
         reservations.reverse().forEach(reservation => {
             tableHTML += `
                 <tr>
-                    <td>${reservation.date || 'N/A'}</td>
                     <td>${reservation.nom || 'N/A'}</td>
                     <td>${reservation.email || 'N/A'}</td>
                     <td>${reservation.telephone || 'N/A'}</td>
                     <td>${reservation.destination || 'N/A'}</td>
-                    <td>${reservation.dateVoyage || 'N/A'}</td>
-                    <td>${reservation.nombrePersonnes || 'N/A'}</td>
                 </tr>
             `;
         });
