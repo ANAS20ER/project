@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ======================================== */
 /* === CSS VARIABLES - LIGHT & DARK MODE === */
 /* ======================================== */
@@ -45,21 +46,30 @@
   --form-focus-shadow: rgba(49, 168, 255, 0.6);
 }
 
+=======
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 /* ---- GLOBAL ---- */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+<<<<<<< HEAD
     background: var(--bg-primary);
     transition: background 0.3s ease;
+=======
+    background: linear-gradient(to bottom right, #fff, #003366);
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 }
 
 h1 {
     text-align: center;
     margin-top: 40px;
     font-size: 36px;
+<<<<<<< HEAD
     color: var(--text-primary);
     transition: color 0.3s ease;
+=======
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 }
 
 p {
@@ -67,20 +77,31 @@ p {
     font-size: 16px;
     opacity: 0.9;
     margin-bottom: 30px;
+<<<<<<< HEAD
     color: var(--text-primary);
     transition: color 0.3s ease;
+=======
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 }
 
 /* ---- CONTAINER ---- */
 .pay-container, .faq-container {
     max-width: 800px;
     margin: auto;
+<<<<<<< HEAD
     background: var(--bg-secondary);
     padding: 30px 40px;
     border-radius: 18px;
     backdrop-filter: blur(12px);
     box-shadow: 0 12px 24px var(--shadow-heavy);
     transition: background 0.3s ease;
+=======
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 40px;
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 }
 
 /* ---- FORM ---- */
@@ -92,8 +113,11 @@ p {
 .pay-form label {
     margin-top: 15px;
     font-weight: 600;
+<<<<<<< HEAD
     color: var(--text-primary);
     transition: color 0.3s ease;
+=======
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 }
 
 .pay-form input,
@@ -106,32 +130,51 @@ p {
     font-size: 15px;
     outline: none;
     transition: 0.3s;
+<<<<<<< HEAD
     background-color: rgba(255, 255, 255, 0.9);
     color: #333;
+=======
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 }
 
 .pay-form input:focus,
 .pay-form select:focus,
 .pay-form textarea:focus {
+<<<<<<< HEAD
     box-shadow: 0 0 8px var(--form-focus-shadow);
+=======
+    box-shadow: 0 0 8px rgba(0, 170, 255, 0.6);
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 }
 
 /* ---- BOUTON ---- */
 .submit-btn {
     margin-top: 20px;
     padding: 14px;
+<<<<<<< HEAD
     background: var(--primary-color);
+=======
+   /*background: #00aaff;*/
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
     border: none;
     border-radius: 10px;
     font-size: 17px;
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
+<<<<<<< HEAD
     color: var(--text-white);
 }
 
 .submit-btn:hover {
     background: var(--primary-dark);
+=======
+    color: #fff;
+}
+
+.submit-btn:hover {
+    background: #0088cc;
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
     transform: translateY(-3px);
 }
 
@@ -149,16 +192,22 @@ p {
 .faq-item h3 {
     margin: 0;
     font-size: 18px;
+<<<<<<< HEAD
     color: var(--text-white);
     transition: color 0.3s ease;
+=======
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 }
 
 .faq-item p {
     margin: 10px 0 0 0;
     display: none;
     font-size: 15px;
+<<<<<<< HEAD
     color: var(--text-white);
     transition: color 0.3s ease;
+=======
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 }
 
 /* ---- FAQ hover animation ---- */

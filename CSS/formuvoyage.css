@@ -90,7 +90,11 @@ body {
 /* 2. CONTENEUR DU FORMULAIRE            */
 /* ================================================= */
 .form-container {
+<<<<<<< HEAD
     background: var(--bg-secondary);
+=======
+    background: #ffffff;
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
     width: auto; 
     margin: 0 40px; 
     margin-top: 40px; 
@@ -140,8 +144,12 @@ h3 {
     font-weight: 600;
     display: block;
     margin-bottom: 6px;
+<<<<<<< HEAD
     color: var(--text-primary);
     transition: color 0.3s ease;
+=======
+    color: #333;
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 }
 
 .required {
@@ -200,4 +208,39 @@ button:hover {
 
 /* ================================================= */
 /* 4. MODES CLAIR/SOMBRE             */
+<<<<<<< HEAD
 /* ================================================= */
+=======
+/* ================================================= */
+
+/* Mode sombre */
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+body.dark-mode table {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+body.dark-mode table tbody tr:nth-child(even) {
+    background-color: #2c2c2c;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background-color: #2c2c2c;
+    color: #f5f5f5;
+    border: 1px solid #555;
+}
+
+body.dark-mode button {
+    background-color: #444;
+    color: #f5f5f5;
+}
+
+body.dark-mode .navbar {
+    background-color: #1e1e1e;
+}
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6

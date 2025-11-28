@@ -91,6 +91,7 @@
 /* ======================================== */
 /* === SECTION RESPONSIVE POUR MOBILE === */
 /* ======================================== */
+/*nor din ha hoa code css la kbir bzaaaaaf */
 
 .container {
     max-width: 1200px;
@@ -143,8 +144,13 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
     background: var(--bg-gradient);
     color: var(--text-primary);
+=======
+    background: linear-gradient(to bottom right, #fff, #003366);
+    color: #333;
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
 }

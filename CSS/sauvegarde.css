@@ -6,6 +6,7 @@
     font-family: "Poppins", sans-serif;
 }
 
+<<<<<<< HEAD
 /* ======================================== */
 /* === CSS VARIABLES - LIGHT & DARK MODE === */
 /* ======================================== */
@@ -57,6 +58,11 @@ body {
     background-color: var(--bg-secondary);
     color: var(--text-primary);
     transition: background-color 0.3s ease, color 0.3s ease;
+=======
+/* ====== PAGE ====== */
+body {
+    padding: 40px 20px;
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 }
 
 /* ====== CONTAINER ====== */
@@ -67,6 +73,7 @@ body {
 
 /* ====== CARD PRINCIPALE ====== */
 .pro-form-card {
+<<<<<<< HEAD
     background: var(--bg-primary);
     padding: 30px 25px;
     border-radius: 20px;
@@ -74,20 +81,38 @@ body {
     margin-bottom: 30px;
     text-align: center;
     transition: background-color 0.3s ease;
+=======
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    text-align: center;
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 }
 
 .pro-form-card h1 {
     font-size: 28px;
+<<<<<<< HEAD
     color: var(--text-primary);
     margin-bottom: 10px;
     transition: color 0.3s ease;
+=======
+    color: #333;
+    margin-bottom: 10px;
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 }
 
 .pro-form-card p {
     font-size: 16px;
+<<<<<<< HEAD
     color: var(--text-secondary);
     margin-bottom: 25px;
     transition: color 0.3s ease;
+=======
+    color: #555;
+    margin-bottom: 25px;
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 }
 
 /* ====== BOUTON ====== */
@@ -95,8 +120,13 @@ body {
     display: inline-block;
     padding: 12px 25px;
     border-radius: 10px;
+<<<<<<< HEAD
     background: var(--primary-color);
     color: var(--text-white);
+=======
+    background: #3498db;
+    color: #fff;
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
@@ -104,7 +134,11 @@ body {
 }
 
 .pro-btn:hover {
+<<<<<<< HEAD
     background: var(--primary-dark);
+=======
+    background: #1d6fa5;
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 }
 
 /* ====== LISTE DES DEMANDES ====== */
@@ -118,31 +152,52 @@ body {
 .pro-info-card {
     padding: 20px;
     border-radius: 15px;
+<<<<<<< HEAD
     box-shadow: 0 6px 15px var(--shadow-medium);
     color: var(--text-white);
+=======
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    color: #fff;
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 /* Hover effet */
 .pro-info-card:hover {
     transform: translateY(-3px);
+<<<<<<< HEAD
     box-shadow: 0 10px 25px var(--shadow-light);
+=======
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 }
 
 /* Alternance des couleurs */
 .pro-info-card:nth-child(odd) {
+<<<<<<< HEAD
     background: var(--primary-color); /* bleu */
 }
 
 .pro-info-card:nth-child(even) {
     background: var(--secondary-color); /* turquoise */
+=======
+    background: #3498db; /* bleu */
+}
+
+.pro-info-card:nth-child(even) {
+    background: #1abc9c; /* turquoise */
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 }
 
 /* TITRE DEMANDE */
 .pro-info-card h3 {
     margin-bottom: 10px;
     font-size: 20px;
+<<<<<<< HEAD
     color: var(--text-white);
+=======
+    color: #fff;
+>>>>>>> b9d6ca908afb807cd7de3f694d4082339ad5bdd6
 }
 
 /* PARAGRAPHES */
